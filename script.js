@@ -1,3 +1,5 @@
+// script.js
+
 const primaryNav = document.getElementById('primary-navigation');
 const navToggle = document.getElementById('hamburger-button');
 
