@@ -1,4 +1,151 @@
 
+/*-----common header styles---------------*/
+/* --- Global Styles & Variables --- */
+:root {
+    --bg-color: #ECECEC;
+    --nav-text-color: #794A9A;
+    --gradient-start: #3AC1DE;
+    --gradient-end: #D73C99;
+    --nav-bg: rgba(255, 255, 255, 0.4);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    min-height: 200vh; /* For scrolling demo */
+}
+
+/* --- Header & Logo --- */
+.fa-header {
+    width: 100%;
+    padding: 15px 6%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 20px; /* Position a bit from top */
+    left: 0;
+    z-index: 1000;
+     transition: transform 0.4s ease-in-out;
+}
+.fa-header.fa-header--hidden {
+    transform: translateY(calc(-100% - 30px));
+}
+.fa-logo-img {
+    height: 80px;
+    width: auto;
+}
+
+/* --- Navigation Menu (Desktop) --- */
+.fa-nav-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 10px;
+    background: var(--nav-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px); /* For Safari */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 8px;
+    border-radius: 50px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    margin: 0px 120px 30px 0px; 
+}
+
+.fa-nav-link {
+    text-decoration: none;
+    color: var(--nav-text-color);
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 10px 18px;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+}
+
+.fa-nav-link:hover {
+    color: #fff;
+    background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+}
+
+/* --- Special 'Contact Us' Button --- */
+.fa-contact-btn {
+    border: 2px solid transparent;
+    padding: 8px 18px; /* Adjusted padding for border */
+    /* Creates a gradient border */
+    background: linear-gradient(var(--nav-bg), var(--nav-bg)) padding-box,
+                linear-gradient(to right, var(--gradient-start), var(--gradient-end)) border-box;
+}
+
+.fa-contact-btn:hover {
+    color: #fff;
+    background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+    box-shadow: 0 0 15px rgba(215, 60, 153, 0.4);
+}
+
+/* --- Hamburger Menu (Initially Hidden) --- */
+.fa-hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.fa-bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: var(--nav-text-color);
+    transition: all 0.3s ease-in-out;
+}
+
+/* --- Responsive Design for Screens < 992px --- */
+@media(max-width: 992px) {
+    .fa-hamburger {
+        display: block;
+        z-index: 1001; /* Above the slide-in menu */
+    }
+
+    /* Animate hamburger to an 'X' */
+    .fa-hamburger.active .fa-bar:nth-child(2) { opacity: 0; }
+    .fa-hamburger.active .fa-bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .fa-hamburger.active .fa-bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+    .fa-nav-menu {
+        position: fixed;
+        right: -100%; /* Initially off-screen */
+        top: 0;
+        height: 100vh;
+        width: min(60%, 300px); /* 60% of screen width, but no more than 300px */
+        flex-direction: column;
+        justify-content: center;
+        gap: 25px;
+        background: rgba(255, 255, 255, 0.9);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        border-radius: 0;
+        box-shadow: -10px 0 20px rgba(0, 0, 0, 0.1);
+        transition: right 0.4s ease-in-out;
+        padding: 50px 20px;
+            margin-right: 0px;
+    }
+
+    .fa-nav-menu.active {
+        right: 0; /* Slide in */
+    }
+
+    .fa-nav-link { font-size: 1.1rem; }
+    .fa-contact-btn { background: none; border: none; }
+}
+
+
+
+
+
 
 
 /*------footer styles------*/
