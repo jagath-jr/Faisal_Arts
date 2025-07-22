@@ -109,7 +109,9 @@ body {
         display: block;
         z-index: 1001; /* Above the slide-in menu */
     }
-
+.fa-header {
+        justify-content: space-between;
+    }
     /* Animate hamburger to an 'X' */
     .fa-hamburger.active .fa-bar:nth-child(2) { opacity: 0; }
     .fa-hamburger.active .fa-bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
