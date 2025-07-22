@@ -19,15 +19,17 @@
             padding: 0;
             box-sizing: border-box;
             
+            
         }
 
         body {
             font-family: var(--font-family);
-            background-color: var(--bg-color);
+           /*background-color: var(--bg-color);*/
             color: var(--text-color);
             overflow-x: hidden;
             position: relative;
-            
+            background: #ffffff;
+background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(145, 145, 145, 1) 100%);
         }
 
         a {

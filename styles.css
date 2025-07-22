@@ -140,10 +140,11 @@
 
         /* --- "WHY CHOOSE US" SECTION STYLES --- */
         .why-choose-us {
-            background-color: var(--wcu-bg-color);
+            /*background-color: var(--wcu-bg-color);*/
             padding: 6rem 6%;
             position: relative;
             z-index: 5;
+            color: black;
         }
 
         .wcu-container {
@@ -369,7 +370,7 @@
 
 #services-section {
     padding: 60px 20px; /* Vertical and horizontal padding */
-    background-color: #1a2a2f;
+    /*background-color: #1a2a2f;*/
 }
 
 .services-container {
@@ -506,9 +507,9 @@
 
 /* Main section styling */
 #trusted-clients-section {
-    background-color: #0000002B; /* Dark teal background from image */
+   /* background-color: #0000002B; *//* Dark teal background from image */
     padding: 60px 0;
-    color: #ffffff;
+    color: black;
     overflow: hidden; /* Ensures nothing spills out */
 }
 
@@ -597,7 +598,8 @@
 /* Location Section */
 .section-location {
   padding: 60px 0;
-  background-color: #1a2a2f;
+ /* background-color: #1a2a2f;*/
+ color: black;
 }
 
 .location-wrapper {
