@@ -848,4 +848,130 @@ background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(145, 145, 145,
 
 
 
+/*------footer styles------*/
+
+/* Footer Styles */
+.footer {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../Img_common/footer_img.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 50px 0 20px;
+    position: relative;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.footer.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-col {
+    flex: 1;
+    margin: 20px;
+    min-width: 250px;
+}
+
+.footer-col#logo-col {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.footer-col h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-col h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 2px;
+    background-color: #00aaff;
+    transition: width 0.3s ease;
+}
+
+.footer-col:hover h3::after {
+    width: 70px;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease, padding-left 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #00aaff;
+    padding-left: 5px;
+}
+
+.footer-col p {
+    line-height: 1.6;
+}
+
+.footer-col ul li i {
+    margin-right: 10px;
+    color: #00aaff;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+    margin-top: 30px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-col {
+        margin: 15px 0;
+    }
+
+    .footer-col#logo-col {
+       justify-content: center;
+    }
+}
+
+
 
