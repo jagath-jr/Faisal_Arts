@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Faisal Arts - Creative Design</title>
+    <title>Faisal Arts</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,10 +11,10 @@
 </head>
 <body>
 
-    <!-- Container for the particles.js background -->
-    <div id="particles-js"></div>
-
-    <header class="primary-header">
+   <header class="primary-header">
+    <a href="index.html" class="logo" id="site-logo">
+                    <img src="Logo_FaisalArts.png" alt="Moms Nest Logo">
+                </a>
         <nav class="navbar">
             <button class="hamburger" id="hamburger-button" aria-controls="primary-navigation" aria-expanded="false">
                 <span class="line"></span>
@@ -32,7 +32,8 @@
     </header>
 
     <main class="hero">
-        <!-- Added 'hidden' class for scroll animation -->
+        <!-- The particles-js canvas is now contained within this main section -->
+        <div id="particles-js"></div>
         <div class="hero-content hidden">
             <div class="hero-text">
                 <p class="brand-name">Faisal Arts</p>
@@ -59,9 +60,197 @@
         </div>
     </main>
 
-    <!-- particles.js library -->
+    <section class="why-choose-us hidden">
+        <div class="wcu-container">
+            <div class="wcu-left-column">
+                <div class="experience-badge">
+                    <p class="experience-number">41+</p>
+                    <p class="experience-text">Years of Experience</p>
+                </div>
+                <div class="image-gallery">
+                    <!-- Replaced broken image links with placeholders -->
+                    <img src="home_img/section _Img_1.webp" alt="Printer with color swatches" class="gallery-img-1" onerror="this.onerror=null;this.src='https://placehold.co/400x250/cccccc/ffffff?text=Image+Not+Found';">
+                    <img src="home_img\section _Img_2.webp" class="gallery-img-2" onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/ffffff?text=Image+Not+Found';">
+                </div>
+            </div>
+            <div class="wcu-right-column">
+                <h3>Why Choose Us</h3>
+                <h2>Lorem Ipsum is simply dummy</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
+                <ul class="features-list">
+                    <li>Lorem Ipsum</li>
+                    <li>Lorem Ipsum</li>
+                    <li>Lorem Ipsum</li>
+                    <li>Lorem Ipsum</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-------secton2---------->
+
+
+    <section id="services-section">
+            <div class="services-container">
+                <div class="services-header">
+                    <h2 class="services-main-title">Our Services</h2>
+                    <p class="services-subtitle">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.
+                    </p>
+                </div>
+
+                <div class="services-grid">
+                    <article class="service-card">
+                        <div class="service-card-content">
+                            <span class="service-card-number">01</span>
+                            <img src="https://placehold.co/600x400/2D3E50/FFFFFF?text=Service+1" alt="Service 1 Placeholder Image" class="service-card-image">
+                            <h3 class="service-card-title">Lorem ipsum</h3>
+                            <p class="service-card-description">
+                                Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-card-content">
+                            <span class="service-card-number">01</span>
+                            <img src="https://placehold.co/600x400/D32F2F/FFFFFF?text=Service+2" alt="Service 2 Placeholder Image" class="service-card-image">
+                            <h3 class="service-card-title">Lorem ipsum</h3>
+                            <p class="service-card-description">
+                                Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-card-content">
+                            <span class="service-card-number">01</span>
+                            <img src="https://placehold.co/600x400/388E3C/FFFFFF?text=Service+3" alt="Service 3 Placeholder Image" class="service-card-image">
+                            <h3 class="service-card-title">Lorem ipsum</h3>
+                            <p class="service-card-description">
+                                Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-card-content">
+                            <span class="service-card-number">01</span>
+                            <img src="https://placehold.co/600x400/1976D2/FFFFFF?text=Service+4" alt="Service 4 Placeholder Image" class="service-card-image">
+                            <h3 class="service-card-title">Lorem ipsum</h3>
+                            <p class="service-card-description">
+                                Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+<!-------section3---------->
+
+
+<section id="trusted-clients-section">
+            <div class="container">
+                <h2 class="clients-heading">Trusted Clients</h2>
+                
+                <div class="client-logos-container">
+                    <div class="client-logos-slider">
+                        <img src="https://i.imgur.com/vHqVb9G.png" alt="Client WebDesign Logo 1">
+                        <img src="https://i.imgur.com/vHqVb9G.png" alt="Client WebDesign Logo 2">
+                        <img src="https://i.imgur.com/vHqVb9G.png" alt="Client WebDesign Logo 3">
+                        <img src="https://i.imgur.com/vHqVb9G.png" alt="Client WebDesign Logo 4">
+                        <img src="https://i.imgur.com/vHqVb9G.png" alt="Client WebDesign Logo 5">
+                        <img src="https://i.imgur.com/vHqVb9G.png" alt="Client WebDesign Logo 6">
+                        <img src="https://i.imgur.com/vHqVb9G.png" alt="Client WebDesign Logo 7">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+<!------section4---------->
+
+<section id="location-section" class="section-location">
+    <div class="container location-wrapper">
+      <div class="location-map animate-on-scroll left-slide">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6161504.977079!2d49.81674840426206!3d23.248487845687524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e48dfb1ab12bd%3A0x33d32f56c0080aa7!2sUnited%20Arab%20Emirates!5e1!3m2!1sen!2sin!4v1753146655018!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div class="location-details animate-on-scroll right-slide">
+        <h2>Our Location</h2>
+        <p>Lorem Ipsum is simply dummy text of the printing</p>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          Lorem Ipsum has been the industry's standard dummy text ever since the
+        </p>
+        <ul class="location-bullets">
+          <li><span class="bullet-icon"></span> Lorem Ipsum is simply</li>
+          <li><span class="bullet-icon"></span> Lorem Ipsum is simply</li>
+          <li><span class="bullet-icon"></span> Lorem Ipsum is simply</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Request Section -->
+  <section id="request-section" class="section-request">
+    <div class="container request-wrapper">
+      <div class="request-content animate-on-scroll left-slide">
+        <h2>Lorem Ipsum is simply dummy</h2>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          Lorem Ipsum has been the industry's standard dummy text ever since the
+        </p>
+        <button class="btn-request">Leave a Request <span class="info-icon">ℹ️</span></button>
+      </div>
+      <div class="request-image animate-on-scroll right-slide">
+        <img src="images/cta-placeholder.jpg" alt="User support request image" />
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer Section -->
+
+
+   <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col" id="logo-col">
+                <!-- You can replace this with your actual logo image -->
+                <img src="Logo_FaisalArts.png" alt="Faisal Arts Logo" class="logo">
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Our products</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Contact us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Get in touch</h3>
+                <p>The 1960s with the release of Letraset sheets containing Lorem Ipsum passages.</p>
+                <p>desktop publishing @publish.com</p>
+            </div>
+            <div class="footer-col">
+                <h3>Contact Info</h3>
+                <ul>
+                    <li><i class="fas fa-phone"></i> 058 203 6070</li>
+                    <li><i class="fas fa-phone"></i> 050 943 5133</li>
+                    <li><i class="fas fa-phone"></i> 050 641 3540</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>2025 Lorem</p>
+        </div>
+    </footer>
+
+
+
+
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <!-- Custom script file -->
     <script src="script.js"></script>
 </body>
 </html>
