@@ -561,11 +561,10 @@
         transform: translateX(0);
     }
     100% {
-        /* Move the slider by the width of its original content */
-        transform: translateX(-100%);
+        /* This should be -50% because JS doubles the logos */
+        transform: translateX(-50%);
     }
 }
-
 
 /* ======================================================= */
 /* ================== Responsive Design ================== */
@@ -581,10 +580,9 @@
     }
 
     .client-logos-slider {
-        gap: 40px; /* Reduce space between logos on smaller screens */
-        animation-duration: 25s; /* Optionally speed up animation */
-    }
-
+    /* ... other styles ... */
+    animation: scroll 30s linear infinite;
+}
     .client-logos-slider img {
         height: 30px; /* Make logos smaller on mobile */
     }
