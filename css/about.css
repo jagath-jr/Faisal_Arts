@@ -1,0 +1,669 @@
+.page-section {
+    padding: 5rem 1rem; /* Generous padding for spacing */
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+        margin-top: 66px;
+}
+
+.section-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(to right, red, blue);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.text-content p {
+    margin-bottom: 1rem;
+    max-width: 500px; /* Limits text width for readability */
+    text-align: justify;
+}
+
+.image-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: var(--card-shadow);
+    display: block;
+}
+.signboards-section {
+    background-color: #e6e6e6; /* Slightly different background for visual separation */
+}
+
+/* --- Fade-in Animation on Scroll --- */
+.page-section {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.page-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.text-content,
+.image-content {
+    flex: 1; /* Each column will take up equal space */
+    min-width: 0; /* Prevents flex items from overflowing on smaller screens */
+}
+
+
+/* --- Your existing image rule is correct --- */
+.image-content img {
+    width: 100%;
+    height: 300px; 
+    object-fit: cover; 
+    border-radius: 16px;
+    box-shadow: var(--card-shadow);
+    display: block;
+}
+
+
+/* --- Responsive Design (Mobile First Approach) --- */
+@media (max-width: 768px) {
+    .page-section {
+        padding: 3rem 1rem;
+    }
+
+    .container {
+        flex-direction: column; /* Stack columns vertically on mobile */
+        gap: 2rem;
+    }
+
+    /* Reverse the visual order for the services section on mobile */
+    .services-container {
+        flex-direction: column-reverse;
+    }
+    
+    .section-title {
+        font-size: 2.2rem;
+        text-align: center;
+    }
+
+    .text-content {
+        text-align: center;
+    }
+
+    .text-content p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .image-content img {
+        height: auto; /* Revert to default height on mobile */
+        object-fit: initial; /* Reset the object-fit property */
+    }
+}
+
+
+/*section2-------------------------------------------*/
+
+
+
+
+/* --- Main "Offers" Component Container --- */
+#offers-component {
+    max-width: 1200px;
+    margin: 4rem auto; /* Adds space above and below the entire component */
+    padding: 0 1rem; /* Ensures content doesn't touch screen edges on mobile */
+}
+
+/* --- Offer Title Styles --- */
+.offer-title-container {
+    text-align: center;
+    margin-bottom: 20rem; /* Space between title and the grey box */
+}
+
+.offer-title-container h2 {
+    display: inline-block;
+    padding: 0.75rem 2.5rem;
+    color: white;
+    font-size: 1.75rem;
+    background: linear-gradient(90deg, #e42750 0%, #8b5cf6 100%);
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Grey Box Styling --- */
+#offer-section-unique {
+    background-color: #0000002B;
+    padding: 3rem 2rem 2rem; /* Reduced bottom padding to accommodate the overlap */
+    border-radius: 24px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+    margin-top: -50px; /* Pulls the container up to overlap with the images */
+}
+
+/* Grid layout for the offer items */
+.offer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    position: relative;
+}
+
+/* First row items styling */
+.offer-item.first-row {
+    margin-top: -11rem; /* Pulls the first row items up */
+    position: relative;
+    z-index: 2; /* Ensures they appear above the container */
+}
+
+/* Individual offer item styling */
+.offer-item {
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.offer-item.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.offer-item img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.offer-item h3 {
+    font-size: 1.25rem;
+    margin: 0 0 0.5rem 0;
+    color: #111827;
+}
+
+.offer-item p {
+    font-size: 1rem;
+    color: #6b7280;
+    line-height: 1.6;
+    padding: 0 0.5rem;
+}
+
+/* --- Responsive Design Media Queries --- */
+
+/* Tablet View (up to 992px) */
+@media (max-width: 992px) {
+    .offer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .offer-item.first-row {
+        margin-top: -30px;
+    }
+    
+    #offer-section-unique {
+        margin-top: -30px;
+    }
+}
+
+/* Mobile View (up to 768px) */
+@media (max-width: 768px) {
+    #offers-component {
+        margin: 2rem auto;
+    }
+    
+    #offer-section-unique {
+        padding: 2.5rem 1rem 1.5rem;
+        margin-top: -20px;
+    }
+
+    .offer-title-container h2 {
+        font-size: 1.5rem;
+        padding: 0.6rem 2rem;
+    }
+
+    .offer-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+    
+    .offer-item.first-row {
+        margin-top: -20px;
+    }
+}
+
+
+
+
+/* --- Scroll To Top Button --- */
+#scrollToTopBtn {
+    position: fixed; /* Keep it in place while scrolling */
+    bottom: 20px;
+    right: 20px;
+    
+    /* Initially hidden */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+    
+    /* Styling */
+    background: linear-gradient(45deg, #d946ef, #2563eb);
+    color: white;
+    border: none;
+    border-radius: 50%; /* Makes it circular */
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+
+    /* Center the icon inside */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it's on top of other content */
+}
+
+/* This class will be added by JavaScript to show the button */
+#scrollToTopBtn.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+#scrollToTopBtn:hover {
+    opacity: 0.9;
+}
+
+
+/*-------Section3-----------------------------------*/
+/*-------Section3-----------------------------------*/
+
+
+/* Container for centering content */
+.container-fa01 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Why Choose Us Section Styling */
+#why-choose-us-fa01 {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+#why-choose-us-fa01 h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    font-weight: 700;
+}
+
+/* Gradient text effect for the company name */
+#why-choose-us-fa01 h2 span {
+    background: linear-gradient(90deg, #00c6ff, #9f42a7);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Grid for the feature cards */
+.features-grid-fa01 {
+    display: grid;
+    /* Create 3 equal columns on desktop */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+/* Individual Feature Card */
+.feature-card-fa01 {
+    min-height: 450px;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    color: #fff;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Aligns content to the bottom */
+
+    /* Placeholder background image - replace with your actual image */
+    background-image: url('../About_us_Img/WCFaisiaArts.webp');
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    
+    /* Animation initial state (for JavaScript) */
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+/* Make cards visible when the 'visible' class is added by JS */
+.feature-card-fa01.visible-fa01 {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Add a subtle lift effect on hover */
+.feature-card-fa01:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Semi-transparent overlay with blur effect */
+.card-content-fa01 {
+    background-color: rgba(25, 25, 25, 0.5);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px); /* For Safari */
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: left;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.feature-stat-fa01 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin: 0;
+    line-height: 1;
+}
+
+.feature-title-fa01 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0.5rem 0;
+}
+
+.card-content-fa01 p:last-child {
+    margin: 0.5rem 0 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #e0e0e0;
+}
+
+/* Staggered animation delays */
+.feature-card-fa01:nth-child(2) {
+    transition-delay: 0.2s;
+}
+.feature-card-fa01:nth-child(3) {
+    transition-delay: 0.4s;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 992px) {
+    /* Stack cards into 1 column on tablets and smaller */
+    .features-grid-fa01 {
+        grid-template-columns: 1fr;
+    }
+    #why-choose-us-fa01 h2 {
+        font-size: 2rem;
+    }
+}
+
+
+/*--------section4-----------------------------------*/
+/*--------section4-----------------------------------*/
+
+
+.container4 {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* --- Testimonials Section --- */
+#testimonials-section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.section-title {
+    font-size: clamp(2rem, 5vw, 2.8rem); /* Responsive font size */
+    font-weight: 700;
+    margin-bottom: 60px;
+    /* Gradient text effect */
+    background: linear-gradient(90deg, #3fa5e3, #814de1);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+/* --- Testimonial Card Layout --- */
+.testimonial-slider-wrapper {
+    overflow: hidden; /* Hides the cards outside the viewport for the slider effect */
+}
+
+.testimonial-slider {
+    display: flex;
+    /* On desktop, create a grid-like layout with spacing */
+    gap: 30px;
+    margin-bottom: 20px;
+    /* JS will handle transitions on mobile */
+}
+
+.testimonial-card {
+    background: var(--card-background);
+    border-radius: var(--border-radius-md);
+    padding: 30px;
+    box-shadow: var(--card-shadow);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* Each card takes up equal space */
+    min-width: 300px; /* Minimum width before wrapping */
+    border: 1px solid #ddd;
+}
+
+/* Card Content */
+.testimonial-card__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.testimonial-card__avatar-placeholder {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #bebfc0;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.testimonial-card__name {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.testimonial-card__body {
+    flex-grow: 1; /* Ensures footer stays at the bottom */
+    color: var(--text-color-light);
+    font-size: 0.95rem;
+}
+
+.highlight-text {
+    color: var(--highlight-color);
+    font-weight: 600;
+}
+
+.testimonial-card__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto; /* Pushes footer to the bottom of the card */
+    padding-top: 20px;
+    border-top: 1px solid #f1f1f1;
+}
+
+.testimonial-card__rating {
+    color: gold;
+}
+
+.testimonial-card__reviewer {
+    font-style: normal;
+    font-weight: 500;
+    color: var(--text-color-light);
+}
+
+/* --- Slider Controls (Hidden on Desktop) --- */
+.slider-controls {
+    display: none; /* Hidden by default */
+    margin-top: 30px;
+}
+
+.slider-btn {
+    background: var(--card-background);
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    font-size: 1rem;
+    color: var(--text-color-dark);
+    transition: all 0.3s ease;
+    margin: 0 10px;
+}
+
+.slider-btn:hover {
+    background-color: var(--highlight-color);
+    color: white;
+    border-color: var(--highlight-color);
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    #testimonials-section {
+        padding: 60px 0;
+    }
+
+    /* Convert to a JS-powered slider on mobile */
+    .testimonial-slider {
+        gap: 0; /* Remove gap as JS will handle spacing via transform */
+        transition: transform 0.5s ease-in-out;
+    }
+    
+    .testimonial-card {
+        /* Each card takes up 90% of the container width */
+        flex: 0 0 90%;
+        margin: 0 5%; /* Center the single card */
+    }
+
+    /* Show slider controls on mobile */
+    .slider-controls {
+        display: block;
+    }
+}
+
+
+
+/* Request Section */
+.section-request {
+  background: white;
+  padding: 2rem 4rem;
+  border-radius: 100px 20px 100px 20px;
+  margin: 60px auto;
+  max-width: 95%;
+  
+  /* Gradient border */
+  border: 4px solid transparent;
+  background-clip: padding-box; /* Ensures background doesn't cover border */
+  position: relative;
+}
+
+.section-request::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  z-index: -1;
+  border-radius: inherit;
+  background: linear-gradient(to right, #ff00aa, #0000ff); /* Pink to Blue gradient */
+  padding: 4px;
+}
+
+.request-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+}
+
+.request-content {
+  flex: 1;
+}
+
+.request-content h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.btn-request {
+ background: linear-gradient(to right, #00c6ff, #bf08b8);
+  border: none;
+  padding: 12px 24px;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn-request:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.request-image img {
+  max-width: 250px;
+  border-radius: 12px;
+}
+
+/* Animations */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.animate-on-scroll.left-slide {
+  transform: translateX(-50px);
+}
+
+.animate-on-scroll.right-slide {
+  transform: translateX(50px);
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateX(0) translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .location-wrapper,
+  .request-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .location-map img,
+  .request-image img {
+    max-width: 100%;
+  }
+
+  .btn-request {
+    margin: 20px auto 0;
+  }
+}
