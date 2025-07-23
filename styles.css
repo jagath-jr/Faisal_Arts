@@ -82,7 +82,7 @@ background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(145, 145, 145,
         }
 
         .nav-list a:not(.contact-btn):hover {
-            color: #ffffff;
+            color: #db258f;
         }
 
         .contact-btn {
@@ -92,7 +92,7 @@ background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(145, 145, 145,
 
         .contact-btn:hover {
             background-color: #e0e0e0;
-            color: #1a2a2f;
+            color: #db258f;
         }
 
         .hamburger {
