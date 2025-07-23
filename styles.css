@@ -473,6 +473,21 @@ background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(145, 145, 145,
             .card-2 { transform: rotate(5deg) translateX(10px) translateY(0); }
             .card-3 { transform: rotate(15deg) translateX(60px) translateY(50px); }
 
+             .card {
+            position: absolute;
+            width: clamp(11rem, 30vw, 70rem);
+            
+            aspect-ratio: 4 / 3;
+            padding: 1.5rem;
+            border-radius: 15px;
+            color: var(--text-color);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: transform 0.4s ease-out;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
             .features-list {
                 grid-template-columns: 1fr;
             }
