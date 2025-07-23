@@ -33,6 +33,28 @@ body {
     left: 0;
     z-index: 1000;
      transition: transform 0.4s ease-in-out;
+
+
+     /* Background with slight transparency and blur */
+    /* width: 100%;
+    padding: 15px 6%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 0; 
+    left: 0;
+    z-index: 1000;
+    transition: transform 0.4s ease-in-out;
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); 
+
+*/
+
+
+
 }
 .fa-header.fa-header--hidden {
     transform: translateY(calc(-100% - 30px));
@@ -141,7 +163,12 @@ body {
     }
 
     .fa-nav-link { font-size: 1.1rem; }
-    .fa-contact-btn { background: none; border: none; }
+    /*.fa-contact-btn { 
+        background: none; border: none;
+        border: 2px solid transparent;
+    padding: 8px 18px;
+    background: linear-gradient(var(--nav-bg), var(--nav-bg)) padding-box, linear-gradient(to right, var(--gradient-start), var(--gradient-end)) border-box;
+     }*/
 }
 
 
