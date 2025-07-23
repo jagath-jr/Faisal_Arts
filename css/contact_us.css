@@ -1,0 +1,345 @@
+/* Main Container for the Contact Page */
+#contact-page-main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.contact-us-container {
+    text-align: center;
+    margin-top: 14rem;
+;
+}
+
+/* Main Title and Intro Paragraph */
+.contact-main-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #00A9B5; /* Teal color from the design */
+    margin-bottom: 0.5rem;
+}
+
+.contact-intro {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto 3rem auto;
+}
+
+/* Grid for the top three contact cards */
+.contact-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    margin: 0 3rem 3rem 3rem;
+}
+
+/* Individual Contact Card Styling */
+.contact-info-card {
+    background: linear-gradient(to right, #00A9B5, #8841A1);
+    color: #fff;
+    padding: 2.5rem 2rem;
+    border-radius: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0; /* For JS fade-in animation */
+    transform: translateY(20px); /* For JS fade-in animation */
+}
+
+.contact-info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Icon styling within the cards */
+.contact-card-icon-wrapper {
+    background-color: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 1rem auto;
+}
+
+.contact-card-icon-wrapper svg {
+    stroke: #00A9B5;
+    width: 32px;
+    height: 32px;
+}
+
+.contact-card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0.5rem 0;
+}
+
+.contact-card-detail {
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Team Contact Bar Styling */
+.team-contact-strip {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: linear-gradient(to right, #00A9B5, #674288, #9E3D95);
+    color: #fff;
+    padding: 2rem;
+    border-radius: 20px;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    gap: 2rem;
+    opacity: 0; /* For JS fade-in animation */
+    transform: translateY(20px); /* For JS fade-in animation */
+     margin: 0 3rem 3rem 3rem;
+}
+
+/* Individual Team Member Info */
+.team-member-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    min-width: 250px; /* Ensures some space on flex wrap */
+}
+
+.team-phone-icon {
+    width: 28px;
+    height: 28px;
+}
+
+.team-member-details p {
+    margin: 0;
+    line-height: 1.4;
+}
+
+.team-member-phone {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.team-member-name {
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+.team-member-role {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+
+/* --- Responsive Design --- */
+
+/* For Tablets and Mobile Phones */
+@media (max-width: 768px) {
+    .contact-main-title {
+        font-size: 2.5rem;
+    }
+
+    .contact-intro {
+        font-size: 1rem;
+    }
+
+    .team-contact-strip {
+        flex-direction: column;
+        align-items: flex-start; /* Aligns items to the left */
+        padding: 2rem;
+    }
+}
+
+
+/*section2-----------------------------------*/
+
+
+/* Main Connect Section Styling */
+#connect-section-fa01 {
+     position: relative;
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 4rem 2rem;
+    box-sizing: border-box;
+    overflow: hidden;
+    gap: 2rem; /* Space between map and content */
+}
+
+/* Iframe Background Container Styling */
+.iframe-bg-container-fa01 {
+    position: absolute;
+    top: 0;
+    left: 4.5rem;
+    width: 87%;
+   height: 80%;
+    z-index: -1;
+    opacity: 0.5;
+    filter: blur(1px);
+    pointer-events: none;
+    border-radius: 20px; /* ADD THIS to curve the corners */
+    overflow: hidden;     /* ADD THIS to clip the map inside */
+}
+
+.iframe-bg-container-fa01 iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Content Wrapper for Layout */
+.content-wrapper-fa01 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    width: 100%;
+    max-width: 1200px;
+    z-index: 1;
+   margin-top: 10rem; 
+}
+
+/* Introduction Text Block */
+.connect-intro-fa01 {
+    flex: 1;
+    max-width: 28.125rem; /* 450px */
+     text-align: justify; /* This justifies the text */
+    text-justify: inter-word; /* Improves spacing between words */
+    padding: 1.5rem; /* Adds some padding around the text */
+    margin-bottom: 1rem; /* Space between intro and form */
+}
+
+.connect-intro-fa01 h2 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    text-align: left; 
+}
+
+/* Gradient Text Effect */
+.gradient-text-fa01 {
+    background: linear-gradient(90deg, #23bdb5, #e03f9e);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.connect-intro-fa01 p {
+    font-size: 1.1rem;
+    color: #4a5568;
+    line-height: 1.7; /* Increased line height for better readability */
+    margin-bottom: 1.5rem; /* Space between paragraphs if you add more */
+    hyphens: auto; /* Enables hyphenation for better justification */
+}
+
+/* Form Container Styling */
+.connect-form-container-fa01 {
+    flex: 1;
+    max-width: 31.25rem; /* 500px */
+     min-height: 31.25rem; /* 500px */
+    background: rgba(23, 42, 58, 0.85);
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+     min-height: 60vh;
+}
+
+/* Form Grid Layout */
+.contact-form-fa01 {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-row-fa01 {
+    display: flex;
+    gap: 1.5rem;
+}
+
+/* General Form Element Styling */
+.contact-form-fa01 input,
+.contact-form-fa01 select,
+.contact-form-fa01 textarea {
+    width: 100%;
+    background: transparent;
+    border: 1px solid #4a5568;
+    border-radius: 8px;
+    padding: 0.9rem 1rem;
+    font-size: 1rem;
+    color: #fff;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form-fa01 input::placeholder,
+.contact-form-fa01 textarea::placeholder {
+    color: #a0aec0;
+}
+
+.contact-form-fa01 input:focus,
+.contact-form-fa01 select:focus,
+.contact-form-fa01 textarea:focus {
+    outline: none;
+    border-color: #23bdb5;
+}
+
+.contact-form-fa01 select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23a0aec0' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1em;
+}
+
+.contact-form-fa01 select option {
+    background: #172a3a;
+    color: #fff;
+}
+
+.submit-btn-fa01 {
+    padding: 1rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(90deg, #23bdb5, #ab3ce3);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.submit-btn-fa01:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 992px) {
+    .content-wrapper-fa01 {
+        flex-direction: column;
+        gap: 3rem;
+        text-align: center;
+    }
+    .connect-intro-fa01 {
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 576px) {
+    #connect-section-fa01 {
+        padding: 4rem 1rem;
+    }
+    .connect-intro-fa01 h2 {
+        font-size: 2.5rem;
+    }
+    .form-row-fa01 {
+        flex-direction: column;
+    }
+    .connect-form-container-fa01 {
+        padding: 1.5rem;
+    }
+}

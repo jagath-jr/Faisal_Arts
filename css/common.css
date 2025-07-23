@@ -56,7 +56,7 @@ body {
 
 
 }
-.fa-header.fa-header--hidden {
+.fa-head.fa-header--hidden {
     transform: translateY(calc(-100% - 30px));
 }
 .fa-logo-img {
