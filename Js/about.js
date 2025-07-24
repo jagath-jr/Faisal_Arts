@@ -314,3 +314,72 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
 });
+
+
+//certificates--------------------------------
+
+
+ function openCertificate(certId) {
+            const popup = document.getElementById(certId);
+            popup.style.display = "flex";
+            document.body.style.overflow = "hidden";
+            
+            // Center the popup content vertically after image loads
+            const img = popup.querySelector('img');
+            if (img.complete) {
+                centerPopupContent(popup);
+            } else {
+                img.onload = function() {
+                    centerPopupContent(popup);
+                };
+            }
+        }
+
+        function centerPopupContent(popup) {
+            const content = popup.querySelector('.popup-content');
+            const windowHeight = window.innerHeight;
+            const contentHeight = content.offsetHeight;
+            
+            if (contentHeight < windowHeight) {
+                content.style.marginTop = ((windowHeight - contentHeight) / 2) + 'px';
+                content.style.marginBottom = ((windowHeight - contentHeight) / 2) + 'px';
+            } else {
+                content.style.marginTop = '2rem';
+                content.style.marginBottom = '2rem';
+            }
+        }
+
+        function closeCertificate(certId) {
+            document.getElementById(certId).style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+
+        // Close when clicking outside the popup content
+        window.onclick = function(event) {
+            document.querySelectorAll('.certificate-popup').forEach(popup => {
+                if (event.target == popup) {
+                    closeCertificate(popup.id);
+                }
+            });
+        }
+
+        // Close with ESC key
+        document.onkeydown = function(evt) {
+            evt = evt || window.event;
+            if (evt.key === "Escape") {
+                document.querySelectorAll('.certificate-popup').forEach(popup => {
+                    if (popup.style.display === "flex") {
+                        closeCertificate(popup.id);
+                    }
+                });
+            }
+        };
+
+        // Handle window resize
+        window.addEventListener('resize', function() {
+            document.querySelectorAll('.certificate-popup').forEach(popup => {
+                if (popup.style.display === "flex") {
+                    centerPopupContent(popup);
+                }
+            });
+        });
