@@ -60,8 +60,10 @@ body {
     transform: translateY(calc(-100% - 30px));
 }
 .fa-logo-img {
-    height: 80px;
+    height: auto;
+    max-height: 80px;
     width: auto;
+    max-width: 120px;
 }
 
 /* --- Navigation Menu (Desktop) --- */

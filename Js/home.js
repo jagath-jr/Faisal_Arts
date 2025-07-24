@@ -117,10 +117,12 @@ document.addEventListener('DOMContentLoaded', function() {
         // Touch movement for mobile/tablet
         else {
             heroSection.addEventListener('touchmove', (e) => {
-                e.preventDefault();
-                const touch = e.touches[0];
-                applyParallax(touch.clientX, touch.clientY);
-            }, { passive: false });
+    // Only apply parallax if touching the cards directly
+    if (e.target.closest('.hero-cards')) {
+        const touch = e.touches[0];
+        applyParallax(touch.clientX, touch.clientY);
+    }
+}, { passive: true }); // Set passive to true for better scrolling performance
         }
 
         // Reset on mouse/touch leave
