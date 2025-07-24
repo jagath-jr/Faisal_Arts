@@ -3,68 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Faisal Arts</title>
+    <title>Faisal Arts Header</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="css/common.css">
+        <link rel="stylesheet" href="css/common.css">
 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-   <header class="primary-header">
+    <header class="fa-head" id="fa-main-header">
+        <a href="../index.html" class="fa-logo-link">
+            <img src="../Img_common/Logo_FaisalArts.png" alt="Faisal Arts Logo" class="fa-logo-img">
+        </a>
 
-    <a href="index.html" class="logoh" id="site-logo">
-                    <img src="Img_common\Logo_FaisalArts.png" alt="Moms Nest Logo">
-                </a>
-
-        <nav class="navbar">
-            <button class="hamburger" id="hamburger-button" aria-controls="primary-navigation" aria-expanded="false">
-                <span class="line"></span>
-                <span class="line"></span>
-                <span class="line"></span>
-            </button>
-            <ul id="primary-navigation" class="nav-list" data-visible="false">
-                <li><a href="#">Home</a></li>
-                <li><a href="html/services.html">Our services</a></li>
-                <li><a href="html\portfolio.html">Portfolio</a></li>
-                <li><a href="html/about.html">About us</a></li>
-                <li><a href="html/contact_us.html" class="contact-btn">Contact us</a></li>
+        <nav class="fa-navbar">
+            <ul class="fa-nav-menu" id="fa-nav-list">
+                <li class="fa-nav-item"><a href="../index.html" class="fa-nav-link">Home</a></li>
+                <li class="fa-nav-item"><a href="html/services.html" class="fa-nav-link">Our services</a></li>
+                <li class="fa-nav-item"><a href="html/portfolio.html" class="fa-nav-link">Portfolio</a></li>
+                <li class="fa-nav-item"><a href="html/about.html" class="fa-nav-link">About us</a></li>
+                <li class="fa-nav-item">
+                    <a href="html/contact_us.html" class="fa-nav-link fa-contact-btn">Contact us</a>
+                </li>
             </ul>
+            <div class="fa-hamburger" id="fa-mobile-menu">
+                <span class="fa-bar"></span>
+                <span class="fa-bar"></span>
+                <span class="fa-bar"></span>
+            </div>
         </nav>
     </header>
 
-    <main class="hero">
-        <!-- The particles-js canvas is now contained within this main section -->
-        <div id="particles-js"></div>
-        <div class="hero-content hidden">
-            <div class="hero-text">
-                <p class="brand-name">Faisal Arts</p>
-                <h1>Lorem Ipsum is simply dummy text of the printing</h1>
-                <a href="#" class="get-started-btn">Get Started &nbsp;➔</a>
-            </div>
+
+<section class="hero-section">
+    <canvas id="particle-canvas"></canvas>
+
+    <div class="container">
+        <div class="hero-content">
+            <div class="logo">Faisal Arts</div>
+            <h1>Bringing Your Vision to Life, One Print at a Time.</h1>
+            <a href="#" class="cta-button">
+                Get Started
+                <span class="arrow-icon">→</span>
+            </a>
+        </div>
+        <div class="hero-cards-wrapper">
             <div class="hero-cards">
                 <div class="card card-1">
-                    <h3>Carousel Mockup</h3>
-                    <p>Showcase Your Designs Like a Pro</p>
-                    <span class="card-icon">✕</span>
+                    <h2>Carousel <span class="highlight-text">Mockup</span></h2>
+                    <h3>Showcase Your Designs Like a Pro</h3>
+                    <p>Develop your creative vision into a premium carousel mockup, designed for creatives, brands, and marketers.</p>
+                    <div class="card-icon-line">
+                        <span>×</span>
+                        <hr/>
+                    </div>
                 </div>
+                
                 <div class="card card-2">
-                    <h3>ideas & visuals!</h3>
-                    <p>#visual #artist</p>
-                    <span class="card-icon">✕</span>
+                    <div class="card-hashtags">
+                        #visual<br>#artist
+                    </div>
+                    <div class="card-content">
+                        <h4>ideas into <span class="highlight-text">visuals!</span></h4>
+                        <p>Bring your creative vision to life with our premium carousel mockup. Whether you're a designer, marketer, or content creator!</p>
+                    </div>
                 </div>
+
                 <div class="card card-3">
-                    <h3>Versatile & High Quality Output</h3>
-                    <p>Make your designs stand-out anywhere</p>
-                    <span class="card-icon">✕</span>
+                    <div class="card-icon-header">
+                        <span>×</span> Redesign Experience
+                    </div>
+                    <h2>Versatile & High Quality <span class="highlight-text">Output</span></h2>
+                    <p>Make your designs <span class="highlight-text-subtle">stand out, anywhere.</span></p>
                 </div>
             </div>
         </div>
-    </main>
+    </div>
+</section>
 
-    <section class="why-choose-us hidden">
+
+
+
+
+
+
+<section class="why-choose-us hidden">
         <div class="wcu-container">
             <div class="wcu-left-column">
                 <div class="experience-badge">
@@ -91,7 +116,9 @@
         </div>
     </section>
 
-    <!-------secton2---------->
+
+
+<!-------secton2---------->
 
 
     <section id="services-section">
@@ -151,12 +178,14 @@
             </div>
         </section>
 
-<!-------section3---------->
 
+<!-------section3---------->
+ <h2 class="clients-heading">Trusted Clients</h2>
 
 <section id="trusted-clients-section">
-            <div class="container">
-                <h2 class="clients-heading">Trusted Clients</h2>
+   
+            <div class="containerT">
+                
                 
                 <div class="client-logos-container">
                     <div class="client-logos-slider">
@@ -183,7 +212,6 @@
             </div>
         </section>
 
-
 <!------section4---------->
 
 <section id="location-section" class="section-location">
@@ -207,6 +235,7 @@
     </div>
   </section>
 
+
   <!-- Request Section -->
   <section id="request-section" class="section-request">
     <div class="container request-wrapper">
@@ -225,22 +254,27 @@
   </section>
 
 
-  <!-- Footer Section -->
+
+
+
+
+    <!-- Footer Section -->
 
 
    <footer class="footer">
         <div class="footer-container">
             <div class="footer-col" id="logo-col">
                 <!-- You can replace this with your actual logo image -->
-                <img src="Img_common\Logo_FaisalArts.png" alt="Faisal Arts Logo" class="logo">
+                <img src="../Img_common\Logo_FaisalArts.png" alt="Faisal Arts Logo" class="logo">
             </div>
             <div class="footer-col">
                 <h3>Quick Links</h3>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Our products</a></li>
-                    <li><a href="#">About us</a></li>
-                    <li><a href="#">Contact us</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="html/services.html">Our Services</a></li>
+                    <li><a href="html/portfolio.html">Portfolio</a></li>
+                    <li><a href="html/about.html">About us</a></li>
+                    <li><a href="html/contact_us.html">Contact us</a></li>
                 </ul>
             </div>
             <div class="footer-col">
@@ -262,11 +296,8 @@
         </div>
     </footer>
 
+    <script src="js/home.js"></script>
+        <script src="Js/common.js"></script>
 
-
-
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="Js/home.js"></script>
-   
 </body>
 </html>
