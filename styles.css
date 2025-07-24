@@ -1,4 +1,7 @@
 /* --- Hero Section --- */
+a {
+    text-decoration: none;
+  }
 .hero-section {
     position: relative;
     min-height: 100dvh;
@@ -407,13 +410,13 @@ h1 {
 
 .experience-badge {
     position: absolute;
-    top: 50%;
-    left: 1.538rem;
+    top: 60%;
+    left: 3.538rem;
     transform: translate(-50%, -50%);
     color: #fff;
     text-align: center;
     z-index: 2;
-    background: rgba(0,0,0,0.7);
+    
     padding: 1rem;
     border-radius: 8px;
 }
@@ -423,12 +426,22 @@ h1 {
     font-weight: 700;
     line-height: 1;
     margin: 0;
+    background: linear-gradient(to right, rgb(32, 32, 238), red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
 }
 
 .experience-text {
     font-size: 0.9rem;
     opacity: 0.8;
     margin: 0;
+    background: linear-gradient(to right, rgb(79, 79, 250), red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
 }
 
 .image-gallery {
@@ -499,7 +512,8 @@ color: transparent;
 .features-list li {
     display: flex;
     align-items: center;
-    font-size: 0.95rem;
+    font-size: 1rem;
+    font-weight: bold;
 }
 
 .features-list li::before {
@@ -508,7 +522,7 @@ color: transparent;
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: var(--text-color);
+    background-color: black;
     margin-right: 0.5rem;
 }
 
@@ -623,13 +637,17 @@ color: transparent;
     background: linear-gradient(135deg, #4A90E2, #D0028D);
     position: relative;
     overflow: hidden;
+     transition: all 0.3s ease;
 
     /* Styles for JS scroll animation */
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
-
+.service-card:hover {
+    transform: translateY(-10px) scale(1.02); /* Move up slightly and scale up */
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.5); /* Add stronger shadow */
+}
 /* Style for when the card is visible */
 .service-card.is-visible {
     opacity: 1;
@@ -643,6 +661,8 @@ color: transparent;
     height: 100%;
     box-sizing: border-box;
     text-align: left;
+     transition: all 0.3s ease;
+      background: linear-gradient(135deg, #4A90E2, #D0028D);
 }
 
 /* Card Elements */
@@ -665,7 +685,7 @@ color: transparent;
 .service-card-title {
     font-size: 1.5rem;
     margin: 0 0 10px 0;
-    color: #000000;
+    color: #fdfdfd;
 }
 
 .service-card-description {
@@ -674,7 +694,53 @@ color: transparent;
     line-height: 1.5;
     margin: 0;
 }
+/* Explore More Button Styles */
+.explore-more-container {
+    text-align: center;
+    margin-top: 50px;
+}
 
+.explore-more-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: linear-gradient(to right, #4A90E2, #D0028D);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(74, 144, 226, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+.explore-more-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(74, 144, 226, 0.6);
+}
+
+.explore-more-btn:active {
+    transform: translateY(1px);
+}
+
+/* Optional: Add a shine effect on hover */
+.explore-more-btn::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -60%;
+    width: 50%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotate(30deg);
+    transition: all 0.3s;
+}
+
+.explore-more-btn:hover::after {
+    left: 110%;
+}
 
 /* --- Responsive Design --- */
 
