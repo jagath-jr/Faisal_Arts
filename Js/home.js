@@ -281,6 +281,14 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+document.querySelector('.explore-more-btn').addEventListener('click', function() {
+    // Add your action here - could be scrolling to another section or opening a modal
+    console.log('Explore More clicked!');
+    // Example: Scroll to contact section
+    // document.getElementById('contact-section').scrollIntoView({ behavior: 'smooth' });
+});
+
+
 
 
 /*-------section3------------*/
