@@ -3,242 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Faisal Arts</title>
+    <title>Faisal Arts Header</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="css/common.css">
+        <link rel="stylesheet" href="css/common.css">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-   <header class="primary-header">
+    <header class="fa-head" id="fa-main-header">
+        <a href="../index.html" class="fa-logo-link">
+            <img src="../Img_common/Logo_FaisalArts.png" alt="Faisal Arts Logo" class="fa-logo-img">
+        </a>
 
-    <a href="index.html" class="logoh" id="site-logo">
-                    <img src="Img_common\Logo_FaisalArts.png" alt="Moms Nest Logo">
-                </a>
-
-        <nav class="navbar">
-            <button class="hamburger" id="hamburger-button" aria-controls="primary-navigation" aria-expanded="false">
-                <span class="line"></span>
-                <span class="line"></span>
-                <span class="line"></span>
-            </button>
-            <ul id="primary-navigation" class="nav-list" data-visible="false">
-                <li><a href="#">Home</a></li>
-                <li><a href="html/services.html">Our services</a></li>
-                <li><a href="html\portfolio.html">Portfolio</a></li>
-                <li><a href="html/about.html">About us</a></li>
-                <li><a href="html/contact_us.html" class="contact-btn">Contact us</a></li>
+        <nav class="fa-navbar">
+            <ul class="fa-nav-menu" id="fa-nav-list">
+                <li class="fa-nav-item"><a href="../index.html" class="fa-nav-link">Home</a></li>
+                <li class="fa-nav-item"><a href="#services" class="fa-nav-link">Our services</a></li>
+                <li class="fa-nav-item"><a href="portfolio.html" class="fa-nav-link">Portfolio</a></li>
+                <li class="fa-nav-item"><a href="about.html" class="fa-nav-link">About us</a></li>
+                <li class="fa-nav-item">
+                    <a href="contact_us.html" class="fa-nav-link fa-contact-btn">Contact us</a>
+                </li>
             </ul>
+            <div class="fa-hamburger" id="fa-mobile-menu">
+                <span class="fa-bar"></span>
+                <span class="fa-bar"></span>
+                <span class="fa-bar"></span>
+            </div>
         </nav>
     </header>
 
-    <main class="hero">
-        <!-- The particles-js canvas is now contained within this main section -->
-        <div id="particles-js"></div>
-        <div class="hero-content hidden">
-            <div class="hero-text">
-                <p class="brand-name">Faisal Arts</p>
-                <h1>Lorem Ipsum is simply dummy text of the printing</h1>
-                <a href="#" class="get-started-btn">Get Started &nbsp;➔</a>
-            </div>
-            <div class="hero-cards">
-                <div class="card card-1">
-                    <h3>Carousel Mockup</h3>
-                    <p>Showcase Your Designs Like a Pro</p>
-                    <span class="card-icon">✕</span>
-                </div>
-                <div class="card card-2">
-                    <h3>ideas & visuals!</h3>
-                    <p>#visual #artist</p>
-                    <span class="card-icon">✕</span>
-                </div>
-                <div class="card card-3">
-                    <h3>Versatile & High Quality Output</h3>
-                    <p>Make your designs stand-out anywhere</p>
-                    <span class="card-icon">✕</span>
-                </div>
-            </div>
-        </div>
-    </main>
 
-    <section class="why-choose-us hidden">
-        <div class="wcu-container">
-            <div class="wcu-left-column">
-                <div class="experience-badge">
-                    <p class="experience-number">41+</p>
-                    <p class="experience-text">Years of Experience</p>
-                </div>
-                <div class="image-gallery">
-                    <!-- Replaced broken image links with placeholders -->
-                    <img src="home_img/section _Img_1.webp" alt="Printer with color swatches" class="gallery-img-1" onerror="this.onerror=null;this.src='https://placehold.co/400x250/cccccc/ffffff?text=Image+Not+Found';">
-                    <img src="home_img\section _Img_2.webp" class="gallery-img-2" onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/ffffff?text=Image+Not+Found';">
-                </div>
-            </div>
-            <div class="wcu-right-column">
-                <h3>Why Choose Us</h3>
-                <h2>Lorem Ipsum is simply dummy</h2>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
-                <ul class="features-list">
-                    <li>Lorem Ipsum</li>
-                    <li>Lorem Ipsum</li>
-                    <li>Lorem Ipsum</li>
-                    <li>Lorem Ipsum</li>
-                </ul>
-            </div>
-        </div>
-    </section>
+<section id="hero-section-fa">
+            <div class="hero-container-fa">
 
-    <!-------secton2---------->
-
-
-    <section id="services-section">
-            <div class="services-container">
-                <div class="services-header">
-                    <h2 class="services-main-title">Our Services</h2>
-                    <p class="services-subtitle">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.
-                    </p>
+                <div id="hero-left-col" class="hero-content-block-fa">
+                    <p class="hero-brand-name-fa">Faisal Arts</p>
+                    <h1 class="hero-title-fa">Bringing Your Vision to Life, One Print at a Time.</h1>
+                    <a href="#contact" class="hero-cta-fa">
+                        Get Started
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                    </a>
                 </div>
 
-                <div class="services-grid">
-                    <article class="service-card">
-                        <div class="service-card-content">
-                            <span class="service-card-number">01</span>
-                            <img src="https://placehold.co/600x400/2D3E50/FFFFFF?text=Service+1" alt="Service 1 Placeholder Image" class="service-card-image">
-                            <h3 class="service-card-title">Lorem ipsum</h3>
-                            <p class="service-card-description">
-                                Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum.
-                            </p>
-                        </div>
-                    </article>
+                <div id="hero-right-col" class="hero-content-block-fa">
+                    <div class="hero-cards-wrapper-fa">
+                        <article class="feature-card-fa card-1">
+                            <h2 class="card-title-fa">ideas into visuals!</h2>
+                            <p class="card-text-fa">Bring your creative concepts to life with our stunning visual mockups.</p>
+                        </article>
+                        
+                        <article class="feature-card-fa card-2">
+                            <h2 class="card-title-fa">Carousel Mockup</h2>
+                            <p class="card-text-fa">Showcase Your Designs Like a Pro with interactive and dynamic carousel displays.</p>
+                            <div class="card-hashtags-fa">
+                                <span>#visual</span>
+                                <span>#artist</span>
+                            </div>
+                        </article>
 
-                    <article class="service-card">
-                        <div class="service-card-content">
-                            <span class="service-card-number">01</span>
-                            <img src="https://placehold.co/600x400/D32F2F/FFFFFF?text=Service+2" alt="Service 2 Placeholder Image" class="service-card-image">
-                            <h3 class="service-card-title">Lorem ipsum</h3>
-                            <p class="service-card-description">
-                                Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum.
-                            </p>
-                        </div>
-                    </article>
-
-                    <article class="service-card">
-                        <div class="service-card-content">
-                            <span class="service-card-number">01</span>
-                            <img src="https://placehold.co/600x400/388E3C/FFFFFF?text=Service+3" alt="Service 3 Placeholder Image" class="service-card-image">
-                            <h3 class="service-card-title">Lorem ipsum</h3>
-                            <p class="service-card-description">
-                                Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum.
-                            </p>
-                        </div>
-                    </article>
-
-                    <article class="service-card">
-                        <div class="service-card-content">
-                            <span class="service-card-number">01</span>
-                            <img src="https://placehold.co/600x400/1976D2/FFFFFF?text=Service+4" alt="Service 4 Placeholder Image" class="service-card-image">
-                            <h3 class="service-card-title">Lorem ipsum</h3>
-                            <p class="service-card-description">
-                                Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum.
-                            </p>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-<!-------section3---------->
-
-
-<section id="trusted-clients-section">
-            <div class="container">
-                <h2 class="clients-heading">Trusted Clients</h2>
-                
-                <div class="client-logos-container">
-                    <div class="client-logos-slider">
-                        <img src="home_img\Our_clients\abudhabi__police.png" alt="Client WebDesign Logo 1">
-                        <img src="home_img/Our_clients/adnec.png" alt="Client WebDesign Logo 2">
-                        <img src="home_img\Our_clients\adnoc.png" alt="Client WebDesign Logo 3">
-                        <img src="home_img\Our_clients\al-muqarram-logo.webp" alt="Client WebDesign Logo 4">
-                        <img src="home_img\Our_clients\aldar.png" alt="Client WebDesign Logo 5">
-                        <img src="home_img\Our_clients\ASIMCO_Logo-01.webp" alt="Client WebDesign Logo 6">
-                        <img src="home_img\Our_clients\emdada.png" alt="Client WebDesign Logo 7">
-                        <img src="home_img\Our_clients\fab_1.png" alt="Client WebDesign Logo 8">
-                        <img src="home_img\Our_clients\Kizad.png" alt="Client WebDesign Logo 9">
-                        <img src="home_img\Our_clients\MHK.png" alt="Client WebDesign Logo 10">
-                        <img src="home_img\Our_clients\noon-2.svg" alt="Client WebDesign Logo 11">
-                        <img src="home_img\Our_clients\plaxit.png" alt="Client WebDesign Logo 12">
-                        <img src="home_img\Our_clients\qumra.webp" alt="Client WebDesign Logo 13">
-                        <img src="home_img\Our_clients\Shell.png" alt="Client WebDesign Logo 14">
-                        <img src="home_img\Our_clients\smart family.png" alt="Client WebDesign Logo 15">
-                        <img src="home_img\Our_clients\tabby.png" alt="Client WebDesign Logo 16">
-                        <img src="home_img\Our_clients\Target.png" alt="Client WebDesign Logo 17">
-                        <img src="home_img\Our_clients\Terraco-Blue.png" alt="Client WebDesign Logo 18">
+                        <article class="feature-card-fa card-3">
+                             <h2 class="card-title-fa">Versatile & High Quality Output</h2>
+                            <p class="card-text-fa">Make your designs stand out, anywhere.</p>
+                        </article>
                     </div>
                 </div>
+
             </div>
         </section>
 
 
-<!------section4---------->
-
-<section id="location-section" class="section-location">
-    <div class="container location-wrapper">
-      <div class="location-map animate-on-scroll left-slide">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6161504.977079!2d49.81674840426206!3d23.248487845687524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e48dfb1ab12bd%3A0x33d32f56c0080aa7!2sUnited%20Arab%20Emirates!5e1!3m2!1sen!2sin!4v1753146655018!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-      <div class="location-details animate-on-scroll right-slide">
-        <h2>Our Location</h2>
-        <p>Lorem Ipsum is simply dummy text of the printing</p>
-        <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-          Lorem Ipsum has been the industry's standard dummy text ever since the
-        </p>
-        <ul class="location-bullets">
-          <li><span class="bullet-icon"></span> Lorem Ipsum is simply</li>
-          <li><span class="bullet-icon"></span> Lorem Ipsum is simply</li>
-          <li><span class="bullet-icon"></span> Lorem Ipsum is simply</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- Request Section -->
-  <section id="request-section" class="section-request">
-    <div class="container request-wrapper">
-      <div class="request-content animate-on-scroll left-slide">
-        <h2>Lorem Ipsum is simply dummy</h2>
-        <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-          Lorem Ipsum has been the industry's standard dummy text ever since the
-        </p>
-        <button class="btn-request">Leave a Request <span class="info-icon">ℹ️</span></button>
-      </div>
-      <div class="request-image animate-on-scroll right-slide">
-        <img src="home_img\section4_Img_2.webp" alt="User support request image" />
-      </div>
-    </div>
-  </section>
 
 
-  <!-- Footer Section -->
+
+
+
+
+
+    <!-- Footer Section -->
 
 
    <footer class="footer">
         <div class="footer-container">
             <div class="footer-col" id="logo-col">
                 <!-- You can replace this with your actual logo image -->
-                <img src="Img_common\Logo_FaisalArts.png" alt="Faisal Arts Logo" class="logo">
+                <img src="../Img_common\Logo_FaisalArts.png" alt="Faisal Arts Logo" class="logo">
             </div>
             <div class="footer-col">
                 <h3>Quick Links</h3>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Our products</a></li>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="services.html">Our products</a></li>
                     <li><a href="#">About us</a></li>
                     <li><a href="#">Contact us</a></li>
                 </ul>
@@ -262,11 +118,8 @@
         </div>
     </footer>
 
+    <script src="js/home.js"></script>
+        <script src="Js/common.js"></script>
 
-
-
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="Js/home.js"></script>
-   
 </body>
 </html>
