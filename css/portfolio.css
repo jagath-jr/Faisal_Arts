@@ -29,10 +29,11 @@
 
 .image-content img {
     width: 100%;
-    height: auto;
+    aspect-ratio: 1 / 1; /* Example: square crop (adjust as needed) */
+    object-fit: cover;    /* Cuts off excess while filling space */
+    object-position: top center; /* Focuses on top-center part of the image */
     border-radius: 16px;
     box-shadow: var(--card-shadow);
-    display: block;
 }
 
 /* --- Specific Section Styles --- */
@@ -147,18 +148,6 @@
 #scrollToTopBtn:hover {
     opacity: 0.9;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
