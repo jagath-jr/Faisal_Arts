@@ -73,7 +73,7 @@ body {
     align-items: center;
     list-style: none;
     gap: 10px;
-    background: var(--nav-bg);
+    background: white;
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px); /* For Safari */
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -85,7 +85,7 @@ body {
 
 .fa-nav-link {
     text-decoration: none;
-    color:white;
+    color:black;
     font-weight: 500;
     font-size: 0.95rem;
     padding: 10px 18px;
@@ -95,7 +95,7 @@ body {
 
 .fa-nav-link:hover {
     color: #fff;
-    background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+    background: linear-gradient(123deg, var(--gradient-start), var(--gradient-end));
 }
 
 /* --- Special 'Contact Us' Button --- */
@@ -1301,21 +1301,6 @@ color: transparent;
     width: 70px;
 }
 
-.material-symbols-outlined {
-    font-family: 'Material Symbols Outlined';
-    font-weight: normal;
-    font-style: normal;
-    font-size: 10px;
-    line-height: 1;
-    letter-spacing: normal;
-    text-transform: none;
-    display: inline-block;
-    white-space: nowrap;
-    word-wrap: normal;
-    direction: ltr;
-    -webkit-font-feature-settings: 'liga';
-    -webkit-font-smoothing: antialiased;
-}
 .footer-col ul {
     list-style: none;
     padding: 0;
