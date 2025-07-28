@@ -99,7 +99,7 @@ body {
 
 /* --- Special 'Contact Us' Button --- */
 .fa-contact-btn {
-    border: 2px solid transparent;
+    border: 1px solid #d73c99;
     padding: 8px 18px; /* Adjusted padding for border */
     /* Creates a gradient border */
     background: linear-gradient(var(--nav-bg), var(--nav-bg)) padding-box,
