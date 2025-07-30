@@ -72,13 +72,13 @@ body {
     align-items: center;
     list-style: none;
     gap: 10px;
-    background: var(--nav-bg);
+    background: white;
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px); /* For Safari */
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgb(0 0 0 / 25%);
     padding: 8px;
     border-radius: 50px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
     margin: 0px 120px 30px 0px; 
 }
 
@@ -99,7 +99,7 @@ body {
 
 /* --- Special 'Contact Us' Button --- */
 .fa-contact-btn {
-    border: 2px solid transparent;
+    border: 1px solid #d73c99;
     padding: 8px 18px; /* Adjusted padding for border */
     /* Creates a gradient border */
     background: linear-gradient(var(--nav-bg), var(--nav-bg)) padding-box,
@@ -183,7 +183,7 @@ body {
 
 /* Footer Styles */
 .footer {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../Img_common/footer_img.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../Img_common/footer_img.webp');
     background-size: cover;
     background-position: center;
     color: #fff;
@@ -302,4 +302,24 @@ body {
     .footer-col#logo-col {
        justify-content: center;
     }
+}
+
+
+
+/* Social Icons */
+.social-icon a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.social-icon a:hover {
+    color: #E1306C; /* Instagram brand color */
+}
+
+.social-icon i {
+    margin-right: 10px;
+    font-size: 1.2rem;
 }

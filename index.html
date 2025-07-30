@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Faisal Arts</title>
-    <link rel="icon" type="image/x-icon" href="Img_common\titlelogo.png">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
+    <link rel="icon" type="image/x-icon" href="Img_common/titlelogo.png">
+    <link rel="stylesheet" href="css/about.css">
+        <link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    
 </head>
 <body>
 
-    <!-- Header Section -->
     <header class="fa-head" id="fa-main-header">
         <a href="../index.html" class="fa-logo-link">
             <img src="../Img_common/Logo_FaisalArts.png" alt="Faisal Arts Logo" class="fa-logo-img">
@@ -22,7 +23,7 @@
 
         <nav class="fa-navbar">
             <ul class="fa-nav-menu" id="fa-nav-list">
-                <li class="fa-nav-item"><a href="../index.html" class="fa-nav-link">Home</a></li>
+                <li class="fa-nav-item"><a href="index.html" class="fa-nav-link">Home</a></li>
                 <li class="fa-nav-item"><a href="html/services.html" class="fa-nav-link">Our services</a></li>
                 <li class="fa-nav-item"><a href="html/portfolio.html" class="fa-nav-link">Portfolio</a></li>
                 <li class="fa-nav-item"><a href="html/about.html" class="fa-nav-link">About us</a></li>
@@ -38,9 +39,10 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <canvas id="particle-canvas"></canvas>
+<!--section1-------------------------------->
+ <section class="hero-section">
+           <canvas id="particle-canvas"></canvas>
+
 
         <div class="container">
             <div class="hero-content">
@@ -85,176 +87,243 @@
         </div>
     </section>
 
-    <!-- Why Choose Us Section -->
-    <section class="why-choose-us hidden">
-        <div class="wcu-container">
-            <div class="wcu-left-column">
-                <div class="experience-badge">
-                    <p class="experience-number">41+</p>
-                    <p class="experience-text">Years of Experience</p>
-                </div>
-                <div class="image-gallery">
-                    <img src="home_img/section _Img_1.webp" alt="Printer with color swatches" class="gallery-img-1" onerror="this.onerror=null;this.src='https://placehold.co/400x250/cccccc/ffffff?text=Image+Not+Found';">
-                    <img src="home_img\section _Img_2.webp" class="gallery-img-2" onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/ffffff?text=Image+Not+Found';">
-                </div>
+<!--section2-------------------------------->
+
+<!-- Why Choose Us Section -->
+<section class="why-choose-us hidden">
+    <div class="wcu-container container">
+        <div class="wcu-left-column">
+            <div class="experience-badge">
+                <p class="experience-number">41+</p>
+                <p class="experience-text">Years of Experience</p>
             </div>
-            <div class="wcu-right-column">
-                <h3>Why Choose Us</h3>
-                <h2>Decades of Craft. Innovation in Every Print.</h2>
-                <p>With over 40 years of trusted experience, Faisal Arts leads the printing industry by blending traditional craftsmanship with modern technology. From 3D signage and CNC laser cutting to high-end prints of all sizes, we deliver precision, quality, and reliability in every project — no matter how big or small.</p>
-                <ul class="features-list">
-                    <li>40+ Years of Expertise</li>
-                    <li>Unmatched Quality</li>
-                    <li>Advanced Technology</li>
-                    <li>End-to-End Solutions</li>
-                </ul>
+            <div class="image-gallery">
+                <img src="home_img\section _Img_2.webp" alt="Printer with color swatches" loading="lazy" class="gallery-img-1" onerror="this.onerror=null;this.src='https://placehold.co/400x250/cccccc/ffffff?text=Image+Not+Found'">
+                <img src="home_img\section _Img_1.webp" alt="Printing services" loading="lazy" class="gallery-img-2" onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/ffffff?text=Image+Not+Found'">
             </div>
         </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services-section">
-        <div class="services-container">
-            <div class="services-header">
-                <h2 class="services-main-title">Our Services</h2>
-                <p class="services-subtitle">
-                    Explore our full range of professional printing solutions designed to bring your brand to life with quality and creativity
-                </p>
-            </div>
-
-            <div class="services-grid">
-                <a href="../html/services.html#3dletter">
-                    <article class="service-card">
-                        <div class="service-card-content">
-                            <span class="service-card-number">01</span>
-                            <img src="home_img/3D Letter Signboard.webp" alt="Service 1 Placeholder Image" class="service-card-image">
-                            <h3 class="service-card-title">3D Letter Signboard</h3>
-                            <p class="service-card-description">
-                               Bold and eye-catching 3D letter signboards that elevate your brand visibility.
-                            </p>
-                        </div>
-                    </article>
-                </a> 
-                
-                <a href="../html/services.html#Vinyl Print">
-                    <article class="service-card">
-                        <div class="service-card-content">
-                            <span class="service-card-number">01</span>
-                            <img src="home_img/Vinyl Print & Cut.webp" alt="Service 2 Placeholder Image" class="service-card-image">
-                            <h3 class="service-card-title">Vinyl Print & Cut</h3>
-                            <p class="service-card-description">
-                                Custom-cut vinyl graphics with sharp, vibrant prints for any surface.
-                            </p>
-                        </div>
-                    </article>
-                </a>
-                
-                <a href="../html/services.html#Engraving">
-                    <article class="service-card">
-                        <div class="service-card-content">
-                            <span class="service-card-number">01</span>
-                            <img src="home_img/Engraving & Etching.webp" alt="Service 3 Placeholder Image" class="service-card-image">
-                            <h3 class="service-card-title">Engraving & Etching</h3>
-                            <p class="service-card-description">
-                                Precision engraving and etching for lasting detail on metal, acrylic, and more.
-                            </p>
-                        </div>
-                    </article>
-                </a>
-                
-                <a href="../html/services.html#Safety">
-                    <article class="service-card">
-                        <div class="service-card-content">
-                            <span class="service-card-number">01</span>
-                            <img src="home_img/Safety Signboards.webp" class="service-card-image">
-                            <h3 class="service-card-title">Safety Signboards</h3>
-                            <p class="service-card-description">
-                                Professional signboards designed for maximum visibility and lasting impact.
-                            </p>
-                        </div>
-                    </article>
-                </a>
-            </div>
+        <div class="wcu-right-column">
+            <h3>Why Choose Us</h3>
+            <h2>Decades of Craft. Innovation in Every Print.</h2>
+            <p>With over 40 years of trusted experience, Faisal Arts leads the printing industry by blending traditional craftsmanship with modern technology. From 3D signage and CNC laser cutting to high-end prints of all sizes, we deliver precision, quality, and reliability in every project — no matter how big or small.</p>
+            <ul class="features-list">
+                <li>40+ Years of Expertise</li>
+                <li>Unmatched Quality</li>
+                <li>Advanced Technology</li>
+                <li>End-to-End Solutions</li>
+            </ul>
         </div>
-        
-        <a href="../html/services.html">
-            <div class="explore-more-container">
-                <button class="explore-more-btn">Explore More</button>
-            </div>
-        </a>
-    </section>
+    </div>
+</section>
 
-    <!-- Trusted Clients Section -->
-    <h2 class="clients-heading">Trusted Clients</h2>
+<!--secton3--------->
+
+
+<section id="services-section">
+    <div class="services-container">
+        <div class="services-header">
+            <h2 class="services-main-title">Our Services</h2>
+            <p class="services-subtitle">
+                Explore our full range of professional printing solutions designed to bring your brand to life with quality and creativity
+            </p>
+        </div>
+
+        <div class="services-grid">
+            <a href="../html/services.html#3dletter" class="service-card">
+                <article>
+                    <div class="service-card-content">
+                        <span class="service-card-number">01</span>
+                        <img src="home_img/3D Letter Signboard.webp" alt="3D Letter Signboard" loading="lazy" class="service-card-image">
+                        <h3 class="service-card-title">3D Letter Signboard</h3>
+                        <p class="service-card-description">
+                           Bold and eye-catching 3D letter signboards that elevate your brand visibility.
+                        </p>
+                    </div>
+                </article>
+            </a> 
+            
+            <a href="../html/services.html#Vinyl Print" class="service-card">
+                <article>
+                    <div class="service-card-content">
+                        <span class="service-card-number">02</span>
+                        <img src="home_img/Vinyl Print & Cut.webp" alt="Vinyl Print & Cut" loading="lazy" class="service-card-image">
+                        <h3 class="service-card-title">Vinyl Print & Cut</h3>
+                        <p class="service-card-description">
+                            Custom-cut vinyl graphics with sharp, vibrant prints for any surface.
+                        </p>
+                    </div>
+                </article>
+            </a>
+            
+            <a href="../html/services.html#Engraving" class="service-card">
+                <article>
+                    <div class="service-card-content">
+                        <span class="service-card-number">03</span>
+                        <img src="home_img/Engraving & Etching.webp" alt="Engraving & Etching" loading="lazy" class="service-card-image">
+                        <h3 class="service-card-title">Engraving & Etching</h3>
+                        <p class="service-card-description">
+                            Precision engraving and etching for lasting detail on metal, acrylic, and more.
+                        </p>
+                    </div>
+                </article>
+            </a>
+            
+            <a href="../html/services.html#Safety" class="service-card">
+                <article>
+                    <div class="service-card-content">
+                        <span class="service-card-number">04</span>
+                        <img src="home_img/Safety Signboards.webp" alt="Safety Signboards" loading="lazy" class="service-card-image">
+                        <h3 class="service-card-title">Safety Signboards</h3>
+                        <p class="service-card-description">
+                            Professional signboards designed for maximum visibility and lasting impact.
+                        </p>
+                    </div>
+                </article>
+            </a>
+        </div>
+    </div>
     
-    <section id="trusted-clients-section">
-        <div class="containerT">
-            <div class="client-logos-container">
-                <div class="client-logos-slider">
-                    <img src="home_img\Our_clients\abudhabi__police.png" alt="Client WebDesign Logo 1">
-                    <img src="home_img/Our_clients/adnec.png" alt="Client WebDesign Logo 2">
-                    <img src="home_img\Our_clients\adnoc.png" alt="Client WebDesign Logo 3">
-                    <img src="home_img\Our_clients\al-muqarram-logo.webp" alt="Client WebDesign Logo 4">
-                    <img src="home_img\Our_clients\aldar.png" alt="Client WebDesign Logo 5">
-                    <img src="home_img\Our_clients\ASIMCO_Logo-01.webp" alt="Client WebDesign Logo 6">
-                    <img src="home_img\Our_clients\emdada.png" alt="Client WebDesign Logo 7">
-                    <img src="home_img\Our_clients\fab_1.png" alt="Client WebDesign Logo 8">
-                    <img src="home_img\Our_clients\Kizad.png" alt="Client WebDesign Logo 9">
-                    <img src="home_img\Our_clients\MHK.png" alt="Client WebDesign Logo 10">
-                    <img src="home_img\Our_clients\noon-2.svg" alt="Client WebDesign Logo 11">
-                    <img src="home_img\Our_clients\plaxit.png" alt="Client WebDesign Logo 12">
-                    <img src="home_img\Our_clients\qumra.webp" alt="Client WebDesign Logo 13">
-                    <img src="home_img\Our_clients\Shell.png" alt="Client WebDesign Logo 14">
-                    <img src="home_img\Our_clients\smart family.png" alt="Client WebDesign Logo 15">
-                    <img src="home_img\Our_clients\tabby.png" alt="Client WebDesign Logo 16">
-                    <img src="home_img\Our_clients\Target.png" alt="Client WebDesign Logo 17">
-                    <img src="home_img\Our_clients\Terraco-Blue.png" alt="Client WebDesign Logo 18">
-                </div>
-            </div>
-        </div>
-    </section>
+    <div class="explore-more-container">
+        <a href="../html/services.html" class="explore-more-btn">Explore More</a>
+    </div>
+</section>
 
-    <!-- Location Section -->
-    <section id="location-section" class="section-location">
-        <div class="container location-wrapper">
-            <div class="location-map animate-on-scroll left-slide">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6161504.977079!2d49.81674840426206!3d23.248487845687524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e48dfb1ab12bd%3A0x33d32f56c0080aa7!2sUnited%20Arab%20Emirates!5e1!3m2!1sen!2sin!4v1753146655018!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-            <div class="location-details animate-on-scroll right-slide">
-                <h2>Our Location</h2>
-                <p>Visit us at our conveniently located studio, easily accessible for walk-ins and consultations. </p>
-                <p>
-                    We're here to serve you with personalized printing solutions right where you need them.
-                </p>
-                <ul class="location-bullets">
-                    <li><span class="bullet-icon"></span> 050-9435133</li>
-                    <li><span class="bullet-icon"></span> Faisal.arts1982@gmail.com</li>
-                    <li><span class="bullet-icon"></span>M-12 Mussaffah industrial area, Abu Dhabi</li>
-                </ul>
-            </div>
-        </div>
-    </section>
 
-    <!-- Request Section -->
-    <section id="request-section" class="section-request">
-        <div class="container request-wrapper">
-            <div class="request-content animate-on-scroll left-slide">
-                <h2>Stay Connected. Get Inspired.</h2>
-                <p>
-                    Subscribe to get the latest updates, offers, and design inspiration straight to your inbox. Have a request? Drop it here — we're ready to bring your ideas to life!
-                </p>
-                <button class="btn-request">Leave a Request <span class="info-icon">ℹ️</span></button>
-            </div>
-            <div class="request-image animate-on-scroll right-slide">
-                <img src="home_img\section4_Img_2.webp" alt="User support request image" />
+
+<!-- Trusted Clients Section -->
+<h2 class="clients-heading">Trusted Clients</h2>
+
+<section id="trusted-clients-section">
+    <div class="containerT">
+        <div class="client-logos-container">
+            <div class="client-logos-slider">
+                <!-- Original logos -->
+                <img src="home_img/Our_clients/abudhabi__police.png" alt="Client WebDesign Logo 1">
+                <img src="home_img/Our_clients/adnec.png" alt="Client WebDesign Logo 2">
+                <img src="home_img/Our_clients/adnoc.png" alt="Client WebDesign Logo 3">
+                <img src="home_img/Our_clients/al-muqarram-logo.webp" alt="Client WebDesign Logo 4">
+                <img src="home_img/Our_clients/aldar.png" alt="Client WebDesign Logo 5">
+                <img src="home_img/Our_clients/ASIMCO_Logo-01.webp" alt="Client WebDesign Logo 6">
+                <img src="home_img/Our_clients/emdada.png" alt="Client WebDesign Logo 7">
+                <img src="home_img/Our_clients/fab_1.png" alt="Client WebDesign Logo 8">
+                <img src="home_img/Our_clients/Kizad.png" alt="Client WebDesign Logo 9">
+                <img src="home_img/Our_clients/MHK.png" alt="Client WebDesign Logo 10">
+                <img src="home_img/Our_clients/noon-2.svg" alt="Client WebDesign Logo 11">
+                <img src="home_img/Our_clients/plaxit.png" alt="Client WebDesign Logo 12">
+                <img src="home_img/Our_clients/qumra.webp" alt="Client WebDesign Logo 13">
+                <img src="home_img/Our_clients/Shell.png" alt="Client WebDesign Logo 14">
+                <img src="home_img/Our_clients/smart family.png" alt="Client WebDesign Logo 15">
+                <img src="home_img/Our_clients/tabby.png" alt="Client WebDesign Logo 16">
+                <img src="home_img/Our_clients/Target.png" alt="Client WebDesign Logo 17">
+                <img src="home_img/Our_clients/Terraco-Blue.png" alt="Client WebDesign Logo 18">
+                
+                <!-- Duplicated logos for seamless looping -->
+                <img src="home_img/Our_clients/abudhabi__police.png" alt="Client WebDesign Logo 1">
+                <img src="home_img/Our_clients/adnec.png" alt="Client WebDesign Logo 2">
+                <img src="home_img/Our_clients/adnoc.png" alt="Client WebDesign Logo 3">
+                <img src="home_img/Our_clients/al-muqarram-logo.webp" alt="Client WebDesign Logo 4">
+                <img src="home_img/Our_clients/aldar.png" alt="Client WebDesign Logo 5">
+                <img src="home_img/Our_clients/ASIMCO_Logo-01.webp" alt="Client WebDesign Logo 6">
+                <img src="home_img/Our_clients/emdada.png" alt="Client WebDesign Logo 7">
+                <img src="home_img/Our_clients/fab_1.png" alt="Client WebDesign Logo 8">
+                <img src="home_img/Our_clients/Kizad.png" alt="Client WebDesign Logo 9">
+                <img src="home_img/Our_clients/MHK.png" alt="Client WebDesign Logo 10">
+                <img src="home_img/Our_clients/noon-2.svg" alt="Client WebDesign Logo 11">
+                <img src="home_img/Our_clients/plaxit.png" alt="Client WebDesign Logo 12">
+                <img src="home_img/Our_clients/qumra.webp" alt="Client WebDesign Logo 13">
+                <img src="home_img/Our_clients/Shell.png" alt="Client WebDesign Logo 14">
+                <img src="home_img/Our_clients/smart family.png" alt="Client WebDesign Logo 15">
+                <img src="home_img/Our_clients/tabby.png" alt="Client WebDesign Logo 16">
+                <img src="home_img/Our_clients/Target.png" alt="Client WebDesign Logo 17">
+                <img src="home_img/Our_clients/Terraco-Blue.png" alt="Client WebDesign Logo 18">
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+
+
+
+
+
+
+<!----========Locstion section====-------->
+
+
+
+<section class="location-section">
+  <div class="location-section-container">
+    <div class="location-section-map">
+     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7269.016591640855!2d54.49152613750378!3d24.363615086455983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e40e6d11a679b%3A0xa95d597408f63229!2sMusaffah%20-%20M12%20-%20Abu%20Dhabi%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2sin!4v1753866536151!5m2!1sen!2sin"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div class="location-section-content">
+      <h2 class="location-section-title"><span>Our</span> Location</h2>
+      <p class="location-section-description">
+        Visit us at our conveniently located studio, easily accessible for walk-ins and consultations.
+        We’re here to serve you with personalized printing solutions right where you need them.
+      </p>
+      <div class="location-section-info">
+        <div class="location-section-item">
+          <i class="fas fa-phone-alt"></i>
+          <span>050-9435133</span>
+        </div>
+        <div class="location-section-item">
+          <i class="fas fa-envelope"></i>
+          <span>Faisal.arts1982@gmail.com</span>
+        </div>
+        <div class="location-section-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>M-12 Mussaffah industrial area, Abu Dhabi</span>
+        </div>
+        <div class="location-section-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>Warehouse : M-34, warehouse Number #60 Mussafah Industrial Area.</span>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- Request Section -->
+<section id="request-section" class="section-request">
+  <div class="container request-wrapper">
+    <div class="request-content">
+      <h2>Stay Connected. Get Inspired.</h2>
+      <p>
+        Subscribe to get the latest updates, offers, and design inspiration straight to your inbox. Have a request? Drop it here — we're ready to bring your ideas to life!
+      </p>
+      <button class="btn-request">Leave a Request <span class="info-icon">ℹ️</span></button>
+    </div>
+    <div class="request-image">
+      <img src="../About_us_Img/section4_Img_2.webp" alt="User support request image" loading="lazy">
+    </div>
+  </div>
+</section>
+
+
+        <button id="scrollToTopBtn" title="Go to top">
+    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="currentColor">
+        <path d="M440-160v-487L216-423l-56-57 320-320 320 320-56 57-224-224v487h-80Z"/>
+    </svg>
+</button>
+
+
+
+
+
+
 
     <!-- Footer Section -->
-    <footer class="footer">
+
+
+   <footer class="footer">
         <div class="footer-container">
             <div class="footer-col" id="logo-col">
+                <!-- You can replace this with your actual logo image -->
                 <img src="../Img_common\Logo_FaisalArts.png" alt="Faisal Arts Logo" class="logo">
             </div>
             <div class="footer-col">
@@ -262,24 +331,29 @@
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="html/services.html">Our Services</a></li>
-                    <li><a href="html/portfolio.html">Portfolio</a></li>
-                    <li><a href="html/about.html">About us</a></li>
+                    <li><a href="html\about.html">About us</a></li>
                     <li><a href="html/contact_us.html">Contact us</a></li>
                 </ul>
             </div>
             <div class="footer-col">
                 <h3>Get in touch</h3>
-                <ul>
-                    <li><i class="fa fa-envelope"></i> Faisal.arts1982@gmail.com</li>
-                    <li><i class="fa fa-map-marker"></i> M-12 Mussaffah industrial area, Abu Dhabi</li>
-                </ul>   
+                 <ul>
+                    <li><i class="fas fa-envelope"></i>Faisal.arts1982@gmail.com</li>
+                    <li><i class="fas fa-map-marker-alt"></i>M-12 Mussaffah industrial area, Abu Dhabi</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Warehouse : M-34, warehouse Number #60 Mussafah Industrial Area.</li>
+                </ul>
             </div>
             <div class="footer-col">
                 <h3>Contact Info</h3>
                 <ul>
-                    <li><i class="fa fa-phone"></i> 058 203 6070</li>
-                    <li><i class="fa fa-phone"></i> 050 943 5133</li>
-                    <li><i class="fa fa-phone"></i> 050 641 3540</li>
+                    <li><i class="fas fa-phone"></i> 058 203 6070</li>
+                    <li><i class="fas fa-phone"></i> 050 943 5133</li>
+                    <li><i class="fas fa-phone"></i> 050 641 3540</li>
+                    <li class="social-icon">
+            <a href="https://www.instagram.com/faisalarts1982?igsh=NTJwdGtkamppY3hp&utm_source=qr" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-instagram"></i> Follow us on Instagram
+            </a>
+        </li>
                 </ul>
             </div>
         </div>
@@ -288,8 +362,8 @@
         </div>
     </footer>
 
-    <!-- Scripts -->
-    <script src="js/home.js"></script>
-    <script src="Js/common.js"></script>
+    <script src="Js/home.js"></script>
+        <script src="Js/common.js"></script>
+
 </body>
 </html>
