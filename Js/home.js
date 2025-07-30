@@ -1,14 +1,12 @@
-// Complete JavaScript with Reload-Only Preloader
+// Complete JavaScript with First Load + Reload Preloader
 document.addEventListener('DOMContentLoaded', function() {
-    // --- PRELOADER THAT ONLY SHOWS ON RELOADS ---
+    // --- PRELOADER THAT SHOWS ON FIRST LOAD AND RELOADS ---
     const preloader = document.getElementById('preloader');
     
-    // Check if this is a page reload (not initial load or navigation)
-    const navigation = performance.getEntriesByType('navigation')[0] || 
-                     (performance.navigation ? performance.navigation : { type: 0 });
-    const isPageReload = navigation.type === 'reload' || navigation.type === 1;
+    // Check if we should skip preloader (internal navigation)
+    const skipPreloader = sessionStorage.getItem('skipPreloader');
     
-    if (preloader && isPageReload) {
+    if (preloader && !skipPreloader) {
         const video = preloader.querySelector('video');
         
         function showPreloader() {
@@ -29,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             
             // Safety timeout in case video fails
-            setTimeout(hidePreloader, 3000);
+            setTimeout(hidePreloader, 2000);
         }
         
         function hidePreloader() {
@@ -43,6 +41,9 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         showPreloader();
+        
+        // Clear the skip flag for future loads
+        sessionStorage.removeItem('skipPreloader');
     } else {
         // If no preloader needed, just initialize animations
         initAnimations();
