@@ -467,7 +467,7 @@ h1 {
 
 .experience-badge {
     position: absolute;
-    top: 60%;
+    top: 75%;
     left: 3.538rem;
     transform: translate(-50%, -50%);
     color: #fff;
@@ -501,7 +501,7 @@ h1 {
 .image-gallery {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     gap: 0.5rem;
     margin-left: 2rem;
     min-height: 300px;
