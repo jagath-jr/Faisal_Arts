@@ -117,6 +117,10 @@ body {
     display: none;
     cursor: pointer;
 }
+.fa-hamburger::before {
+    display: none;
+    cursor: pointer;
+}
 
 .fa-bar {
     display: block;
@@ -133,7 +137,7 @@ body {
         display: block;
         z-index: 1001; /* Above the slide-in menu */
     }
-.fa-header {
+.fa-head {
         justify-content: space-between;
     }
     /* Animate hamburger to an 'X' */
