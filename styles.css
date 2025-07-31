@@ -6,7 +6,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(to right, #ffffff, #ffffff);
+    background-image: linear-gradient(to right, #ecebeb, #949393);
     z-index: 9999;
     display: flex; /* Changed from 'none' to 'flex' to show immediately */
     justify-content: center;
@@ -435,6 +435,7 @@ h1 {
 
 
 /* --- "WHY CHOOSE US" SECTION STYLES --- */
+/* --- "WHY CHOOSE US" SECTION STYLES --- */
 :root {
     --wcu-primary-gradient: linear-gradient(to right, #2020ee, red);
     --wcu-secondary-gradient: linear-gradient(to right, #4f4ffa, red);
@@ -446,6 +447,7 @@ h1 {
     position: relative;
     z-index: 5;
     color: #000;
+    overflow: hidden;
 }
 
 .container {
@@ -475,6 +477,14 @@ h1 {
     z-index: 2;
     padding: 1rem;
     border-radius: 8px;
+    transform: translate(-50%, -50%) scale(0.95);
+    opacity: 0;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s;
+}
+
+.visible .experience-badge {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
 }
 
 .experience-number {
@@ -486,8 +496,15 @@ h1 {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease;
+    display: inline-block;
+    min-width: 60px; /* Prevents width jumping during animation */
+    text-align: center;
 }
 
+.experience-badge:hover .experience-number {
+    transform: none;
+}
 .experience-text {
     font-size: 0.9rem;
     opacity: 0.8;
@@ -505,6 +522,7 @@ h1 {
     gap: 0.5rem;
     margin-left: 2rem;
     min-height: 300px;
+    perspective: 1000px;
 }
 
 .image-gallery img {
@@ -513,18 +531,36 @@ h1 {
     object-fit: cover;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.6s ease-out;
+}
+
+.visible .image-gallery img {
+    transform: translateY(0);
+    opacity: 1;
 }
 
 .gallery-img-1 {
     grid-area: 1 / 1 / 3 / 5;
+    transition-delay: 0.2s;
 }
 
 .gallery-img-2 {
     grid-area: 2 / 2 / 5 / 6;
+    transition-delay: 0.4s;
 }
 
 .wcu-right-column {
     order: 1;
+    transform: translateX(-30px);
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.visible .wcu-right-column {
+    transform: translateX(0);
+    opacity: 1;
 }
 
 .wcu-right-column h3 {
@@ -535,6 +571,12 @@ h1 {
     color: var(--text-color);
     opacity: 0.7;
     margin-bottom: 1rem;
+    transform: translateY(10px);
+    transition: all 0.4s ease 0.2s;
+}
+
+.visible .wcu-right-column h3 {
+    transform: translateY(0);
 }
 
 .wcu-right-column h2 {
@@ -546,12 +588,24 @@ h1 {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    transform: translateY(10px);
+    transition: all 0.4s ease 0.3s;
+}
+
+.visible .wcu-right-column h2 {
+    transform: translateY(0);
 }
 
 .wcu-right-column p {
     opacity: 0.8;
     line-height: 1.6;
     margin-bottom: 1.5rem;
+    transform: translateY(10px);
+    transition: all 0.4s ease 0.4s;
+}
+
+.visible .wcu-right-column p {
+    transform: translateY(0);
 }
 
 .features-list {
@@ -566,7 +620,20 @@ h1 {
     display: flex;
     align-items: center;
     font-weight: bold;
+    transform: translateX(-20px);
+    opacity: 0;
+    transition: all 0.4s ease;
 }
+
+.visible .features-list li {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.features-list li:nth-child(1) { transition-delay: 0.5s; }
+.features-list li:nth-child(2) { transition-delay: 0.6s; }
+.features-list li:nth-child(3) { transition-delay: 0.7s; }
+.features-list li:nth-child(4) { transition-delay: 0.8s; }
 
 .features-list li::before {
     content: '';
@@ -576,6 +643,29 @@ h1 {
     border-radius: 50%;
     background-color: #000;
     margin-right: 0.5rem;
+    transform: scale(0);
+    transition: transform 0.3s ease;
+}
+
+.visible .features-list li::before {
+    transform: scale(1);
+}
+
+/* Hover effects */
+.features-list li:hover {
+    color: #2020ee;
+    transform: translateX(5px) !important;
+}
+
+.features-list li:hover::before {
+    background: var(--wcu-primary-gradient);
+    transform: scale(1.2);
+}
+
+.image-gallery img:hover {
+    transform: scale(1.02) !important;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    z-index: 1;
 }
 
 /* --- Responsive Breakpoints --- */
@@ -620,14 +710,20 @@ h1 {
 /* --- Animation Classes --- */
 .hidden {
     opacity: 0;
-    transform: translateY(50px);
-    transition: all 0.8s ease-out;
 }
 
 .visible {
     opacity: 1;
-    transform: translateY(0);
 }
+
+
+@media (min-width: 768px) {
+    .experience-number {
+        font-size: 3rem;
+        min-width: 80px;
+    }
+}
+
 /*============================*/
 /* Services Section */
 /* Container */
@@ -876,6 +972,97 @@ h1 {
     .service-card-title {
         font-size: 1.2rem;
     }
+}
+
+/*========[][][][][][][][]======*/
+
+/* Enhanced Service Box Animations */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 20px;
+}
+
+.service-box {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  color: white;
+  height: 240px;
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  opacity: 0;
+  transform: translateY(30px);
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Individual animation delays for each box */
+.service-box-01 {
+  animation: fadeInUp 0.6s 0.1s forwards;
+}
+.service-box-02 {
+  animation: fadeInUp 0.6s 0.3s forwards;
+}
+.service-box-03 {
+  animation: fadeInUp 0.6s 0.5s forwards;
+}
+.service-box-04 {
+  animation: fadeInUp 0.6s 0.7s forwards;
+}
+
+/* Enhanced hover effect */
+.service-box:hover {
+  transform: translateY(-5px) scale(1.02) !important;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.service-box:hover .service-overlay {
+  background: linear-gradient(to bottom right, rgba(0, 165, 197, 0.8), rgba(228, 54, 112, 0.8));
+}
+
+/* Content animations */
+.service-content {
+  position: relative;
+  z-index: 2;
+  text-align: left;
+  transform: translateY(20px);
+  transition: transform 0.4s ease;
+  opacity: 0;
+  transition-delay: 0.2s;
+}
+
+.service-box.animate-in .service-content {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Keyframes for the animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .service-box {
+    height: 200px;
+    animation-delay: 0s !important;
+    animation-duration: 0.5s !important;
+  }
+  
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /*<!-- Trusted Clients Section -->*/
