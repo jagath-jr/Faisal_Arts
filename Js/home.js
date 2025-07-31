@@ -1,4 +1,4 @@
-// Complete Updated JavaScript with Immediate Preloader
+// Complete Updated JavaScript with Service Section Animations
 document.addEventListener('DOMContentLoaded', function() {
     // --- PRELOADER THAT SHOWS IMMEDIATELY ---
     const preloader = document.getElementById('preloader');
@@ -69,7 +69,69 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // --- ANIMATION FUNCTIONS ---
     function initAnimations() {
-        // 1. PARTICLE BACKGROUND ANIMATION
+        // 1. Enhanced Service Section Animation
+        const animateServiceSection = () => {
+            const serviceSection = document.getElementById('our-services-section');
+            const serviceBoxes = document.querySelectorAll('.service-box');
+            
+            if (!serviceSection || !serviceBoxes.length) return;
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Animate each service box with a delay
+                        serviceBoxes.forEach((box, index) => {
+                            setTimeout(() => {
+                                box.classList.add('animate-in');
+                                
+                                // Add a ripple effect to the overlay
+                                const overlay = box.querySelector('.service-overlay');
+                                if (overlay) {
+                                    overlay.style.transform = 'scale(1)';
+                                    overlay.style.opacity = '1';
+                                }
+                                
+                                // Animate the content
+                                const content = box.querySelector('.service-content');
+                                if (content) {
+                                    setTimeout(() => {
+                                        content.style.transform = 'translateY(0)';
+                                        content.style.opacity = '1';
+                                    }, 150);
+                                }
+                            }, index * 200);
+                        });
+                        
+                        // Unobserve after animation triggers
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -100px 0px'
+            });
+
+            observer.observe(serviceSection);
+
+            // Add hover effects dynamically
+            serviceBoxes.forEach(box => {
+                box.addEventListener('mouseenter', () => {
+                    const content = box.querySelector('.service-content');
+                    if (content) {
+                        content.style.transform = 'translateY(-5px)';
+                    }
+                });
+                
+                box.addEventListener('mouseleave', () => {
+                    const content = box.querySelector('.service-content');
+                    if (content) {
+                        content.style.transform = 'translateY(0)';
+                    }
+                });
+            });
+        };
+
+        // 2. PARTICLE BACKGROUND ANIMATION
         const initParticleBackground = () => {
             const canvas = document.getElementById('particle-canvas');
             if (!canvas) return;
@@ -160,7 +222,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         };
 
-        // 2. SCROLL-REVEAL ANIMATIONS
+        // 3. SCROLL-REVEAL ANIMATIONS
         const animateSectionOnScroll = (sectionSelector, visibleClass = 'visible', hiddenClass = 'hidden') => {
             const sections = document.querySelectorAll(sectionSelector);
             if (!sections.length) return;
@@ -181,7 +243,7 @@ document.addEventListener('DOMContentLoaded', function() {
             sections.forEach(section => observer.observe(section));
         };
 
-        // 3. FEATURE LIST ENHANCEMENTS
+        // 4. FEATURE LIST ENHANCEMENTS
         const enhanceFeatureList = () => {
             const features = document.querySelectorAll('.features-list li');
             if (!features.length) return;
@@ -196,42 +258,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     item.style.transform = 'translateX(0)';
                 });
             });
-        };
-
-        // 4. SERVICE CARDS ANIMATION
-        const animateServiceCards = () => {
-            const serviceCards = document.querySelectorAll('.service-card');
-            if (!serviceCards.length) return;
-            
-            if ('IntersectionObserver' in window) {
-                const observer = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            entry.target.classList.add('is-visible');
-                            observer.unobserve(entry.target);
-                        }
-                    });
-                }, {
-                    threshold: 0.1,
-                    rootMargin: '0px 0px -100px 0px'
-                });
-                
-                serviceCards.forEach(card => observer.observe(card));
-            } else {
-                const handleScrollAnimations = () => {
-                    serviceCards.forEach(card => {
-                        const rect = card.getBoundingClientRect();
-                        if (rect.top <= window.innerHeight * 0.75 && rect.bottom >= 0) {
-                            card.classList.add('is-visible');
-                        }
-                    });
-                };
-                
-                handleScrollAnimations();
-                window.addEventListener('scroll', () => {
-                    window.requestAnimationFrame(handleScrollAnimations);
-                }, { passive: true });
-            }
         };
 
         // 5. CLIENT LOGO SLIDER
@@ -313,7 +339,7 @@ document.addEventListener('DOMContentLoaded', function() {
         initParticleBackground();
         animateSectionOnScroll('.why-choose-us');
         enhanceFeatureList();
-        animateServiceCards();
+        animateServiceSection(); // Updated service section animation
         initClientSlider();
         animateLocationSection();
         animateRequestSection();
@@ -367,4 +393,37 @@ window.addEventListener('load', function() {
             preloader.style.display = 'none';
         }
     }, 5000); // 5 second timeout as absolute fallback
+});
+
+// Experience Counter Animation
+document.addEventListener('DOMContentLoaded', function() {
+    const experienceNumber = document.querySelector('.experience-number');
+    if (experienceNumber) {
+        // Set CSS variable for the counter
+        experienceNumber.style.setProperty('--count', '0');
+        
+        // When section becomes visible
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Animate from 0 to 43 over 2 seconds
+                    let start = 0;
+                    const end = 43;
+                    const duration = 2000; // 2 seconds
+                    const increment = end / (duration / 16); // Roughly 60fps
+                    
+                    const timer = setInterval(() => {
+                        start += increment;
+                        if (start >= end) {
+                            start = end;
+                            clearInterval(timer);
+                        }
+                        experienceNumber.textContent = Math.floor(start) + '+';
+                    }, 16);
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        observer.observe(document.querySelector('.why-choose-us'));
+    }
 });
