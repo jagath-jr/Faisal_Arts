@@ -1,8 +1,15 @@
-// Complete JavaScript with First Load + Reload Preloader
+// Complete Updated JavaScript with Immediate Preloader
 document.addEventListener('DOMContentLoaded', function() {
-    // --- PRELOADER THAT SHOWS ON FIRST LOAD AND RELOADS ---
+    // --- PRELOADER THAT SHOWS IMMEDIATELY ---
     const preloader = document.getElementById('preloader');
+    const mainContent = document.getElementById('main-content');
     
+    // Always hide main content initially
+    if (mainContent) {
+        mainContent.style.opacity = '0';
+        mainContent.style.visibility = 'hidden';
+    }
+
     // Check if we should skip preloader (internal navigation)
     const skipPreloader = sessionStorage.getItem('skipPreloader');
     
@@ -10,9 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const video = preloader.querySelector('video');
         
         function showPreloader() {
-            preloader.style.display = 'flex';
-            preloader.classList.remove('preloader-hidden');
-            
+            // Preloader is already visible (set in CSS)
             if (video) {
                 video.currentTime = 0;
                 video.play().catch(e => console.log('Video play error:', e));
@@ -33,6 +38,13 @@ document.addEventListener('DOMContentLoaded', function() {
         function hidePreloader() {
             preloader.classList.add('preloader-hidden');
             
+            // Show main content with fade-in effect
+            if (mainContent) {
+                mainContent.style.opacity = '1';
+                mainContent.style.visibility = 'visible';
+                mainContent.classList.add('content-visible');
+            }
+            
             // Remove preloader from DOM after animation completes
             setTimeout(() => {
                 preloader.style.display = 'none';
@@ -45,7 +57,13 @@ document.addEventListener('DOMContentLoaded', function() {
         // Clear the skip flag for future loads
         sessionStorage.removeItem('skipPreloader');
     } else {
-        // If no preloader needed, just initialize animations
+        // If no preloader needed, just show content immediately
+        if (preloader) preloader.style.display = 'none';
+        if (mainContent) {
+            mainContent.style.opacity = '1';
+            mainContent.style.visibility = 'visible';
+            mainContent.classList.add('content-visible');
+        }
         initAnimations();
     }
 
@@ -331,4 +349,22 @@ document.addEventListener('click', function(e) {
             sessionStorage.setItem('skipPreloader', 'true');
         }
     }
+});
+
+// Ensure main content is visible if JavaScript fails
+window.addEventListener('load', function() {
+    const mainContent = document.getElementById('main-content');
+    const preloader = document.getElementById('preloader');
+    
+    // Fallback in case preloader doesn't hide properly
+    setTimeout(function() {
+        if (mainContent) {
+            mainContent.style.opacity = '1';
+            mainContent.style.visibility = 'visible';
+            mainContent.classList.add('content-visible');
+        }
+        if (preloader) {
+            preloader.style.display = 'none';
+        }
+    }, 5000); // 5 second timeout as absolute fallback
 });
