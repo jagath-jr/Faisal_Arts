@@ -303,7 +303,7 @@
 
 /* Gradient text effect for the company name */
 #why-choose-us-fa01 h2 span {
-    background: linear-gradient(90deg, #00c6ff, #9f42a7);
+   background: linear-gradient(90deg, #00c6ff, #c10465);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -361,6 +361,7 @@
     border-radius: 8px;
     text-align: left;
     border: 1px solid rgba(255, 255, 255, 0.1);
+    height: 16rem;
 }
 
 .feature-stat-fa01 {
@@ -381,6 +382,7 @@
     font-size: 0.95rem;
     line-height: 1.6;
     color: #e0e0e0;
+    text-align: justify;
 }
 
 /* Staggered animation delays */
