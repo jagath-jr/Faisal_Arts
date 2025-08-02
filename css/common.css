@@ -306,6 +306,17 @@ body {
     .footer-col#logo-col {
        justify-content: center;
     }
+
+    .footer-col h3::after {
+    content: '';
+    position: absolute;
+    left: 99px;
+    bottom: 0;
+    width: 59px;
+    height: 2px;
+    background-color: #00aaff;
+    transition: width 0.3s ease;
+}
 }
 
 

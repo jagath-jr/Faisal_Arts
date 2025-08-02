@@ -101,63 +101,59 @@
 <!---sectoion2------>
 
 
-        <section id="connect-section-fa01">
-            <div class="iframe-bg-container-fa01">
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3126355.646506318!2d51.306236227779685!3d24.336131958272134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e48dfb1ab12bd%3A0x33d32f56c0080aa7!2sUnited%20Arab%20Emirates!5e1!3m2!1sen!2sin!4v1753274048194!5m2!1sen!2sin" 
-                    width="600" 
-                    height="450" 
-                    style="border:0;" 
-                    allowfullscreen="" 
-                    loading="lazy" 
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-            </div>
+<section id="connect-section-fa01">
+    <div class="iframe-bg-container-fa01">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3126355.646506318!2d51.306236227779685!3d24.336131958272134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e48dfb1ab12bd%3A0x33d32f56c0080aa7!2sUnited%20Arab%20Emirates!5e1!3m2!1sen!2sin!4v1753274048194!5m2!1sen!2sin" 
+            width="600" 
+            height="450" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
 
-            <div class="content-wrapper-fa01">
-                <div class="connect-intro-fa01">
-                    <h2 class="gradient-text-fa01">Lets Connect</h2>
-                    <p>
-                        At Faisal Arts, we turn your ideas into eye-catching
-                        designs. Got a question or project in mind? Reach
-                        out to us or fill out the inquiry form below.
-                    </p>
+    <div class="content-wrapper-fa01">
+        <div class="connect-intro-fa01">
+            <h2 class="gradient-text-fa01">Lets Connect</h2>
+            <p>
+                At Faisal Arts, we turn your ideas into eye-catching
+                designs. Got a question or project in mind? Reach
+                out to us or fill out the inquiry form below.
+            </p>
+        </div>
+
+        <div class="connect-form-container-fa01">
+            <form id="contactForm-fa01" class="contact-form-fa01" novalidate>
+                <div class="form-row-fa01">
+                    <input type="text" id="name" name="name" placeholder="Name" required>
+                    <input type="tel" id="phone" name="phone" placeholder="Phone" required>
                 </div>
-
-                <div class="connect-form-container-fa01">
-                    <form id="contactForm-fa01" class="contact-form-fa01" novalidate>
-                        <div class="form-row-fa01">
-                            <input type="text" id="name" name="name" placeholder="Name" required>
-                            <input type="tel" id="phone" name="phone" placeholder="Phone" required>
-                        </div>
-                        <div class="form-row-fa01">
-                            <input type="email" id="email" name="email" placeholder="Email" required>
-                            <select id="services" name="services" required>
-                                <option value="" disabled selected>Choose services</option>
-                                <option value="web-design">3D Letter Signboards</option>
-                                <option value="graphic-design">PVC Banner</option>
-                                <option value="branding">Project Signboards</option>
-                                <option value="seo">Safety Signages</option>
-                                <option value="seo">Roll up Stands</option>
-                                <option value="seo">Vinyl Print & Cut</option>
-                                <option value="seo">Engraving & Etching</option>
-                            </select>
-                        </div>
-                        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
-                        <button type="submit" class="submit-btn-fa01">Submit</button>
-                    </form>
+                <div class="form-row-fa01">
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                    <select id="services" name="services" required>
+                        <option value="" disabled selected>Choose services</option>
+                        <option value="3d-letter-signboards">3D Letter Signboards</option>
+                        <option value="pvc-banner">PVC Banner</option>
+                        <option value="project-signboards">Project Signboards</option>
+                        <option value="safety-signages">Safety Signages</option>
+                        <option value="roll-up-stands">Roll up Stands</option>
+                        <option value="vinyl-print-cut">Vinyl Print & Cut</option>
+                        <option value="engraving-etching">Engraving & Etching</option>
+                    </select>
                 </div>
-            </div>
-        </section>
+                <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit" class="submit-btn-fa01">Submit</button>
+            </form>
+        </div>
+    </div>
+</section>
 
 
-    <script src="script.js"></script>
-    </body>
-</html>
+
 
         <!-- Footer Section -->
-
-
    
   <footer class="footer">
         <div class="footer-container">
@@ -204,6 +200,52 @@
 
     <script src="../Js/contact_us.js"></script>
         <script src="../Js/common.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>
+    // Initialize EmailJS with your public key
+    (function() {
+        emailjs.init('JZQAeXLDE1FIXxjBl'); // Replace with your actual public key
+    })();
+
+    document.getElementById('contactForm-fa01').addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        const form = this;
+        const submitBtn = form.querySelector('.submit-btn-fa01');
+        const originalBtnText = submitBtn.textContent;
+        
+        // Change button text to show loading state
+        submitBtn.textContent = 'Sending...';
+        submitBtn.disabled = true;
+        
+        // Validate form
+        if (!form.checkValidity()) {
+            alert('Please fill out all required fields correctly.');
+            submitBtn.textContent = originalBtnText;
+            submitBtn.disabled = false;
+            return;
+        }
+        
+        // Send form data using EmailJS
+        emailjs.sendForm('service_ikz3dlc', 'template_qxyjbqd', form)
+            .then(function() {
+                // Show success message
+                alert('Thank you! Your message has been sent successfully. We will contact you soon.');
+                form.reset();
+            }, function(error) {
+                // Show error message
+                alert('Oops! Something went wrong. Please try again later or contact us directly.');
+                console.error('EmailJS Error:', error);
+            })
+            .finally(function() {
+                // Reset button state
+                submitBtn.textContent = originalBtnText;
+                submitBtn.disabled = false;
+            });
+    });
+</script>
+
 
 </body>
 </html>
