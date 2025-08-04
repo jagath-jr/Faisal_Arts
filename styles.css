@@ -303,7 +303,7 @@ h1 {
         display: none !important;
     }
     .slide {
-        filter: blur(2px); /* Less blur on mobile */
+        filter: blur(1px); /* Less blur on mobile */
         transform: scale(1.02); /* Smaller zoom on mobile */
     }
     
