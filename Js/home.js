@@ -427,3 +427,11 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(document.querySelector('.why-choose-us'));
     }
 });
+
+
+
+
+// Placeholder for future interactivity
+document.addEventListener("DOMContentLoaded", () => {
+  console.log("Stay Connected section loaded.");
+});
