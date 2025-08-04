@@ -155,32 +155,34 @@
 
 
 /* Main Connect Section Styling */
+/* Main Connect Section Styling */
 #connect-section-fa01 {
-     position: relative;
+    position: relative;
     display: flex;
-    flex-direction: column; /* Stack children vertically */
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     padding: 4rem 2rem;
     box-sizing: border-box;
     overflow: hidden;
-    gap: 2rem; /* Space between map and content */
+    gap: 2rem;
 }
 
-/* Iframe Background Container Styling */
+/* Iframe Background Container Styling - Desktop only */
 .iframe-bg-container-fa01 {
+    display: none; /* Hide by default for mobile */
     position: absolute;
     top: 0;
     left: 4.5rem;
     width: 87%;
-   height: 80%;
+    height: 80%;
     z-index: -1;
     opacity: 0.5;
     filter: blur(1px);
     pointer-events: none;
-    border-radius: 20px; /* ADD THIS to curve the corners */
-    overflow: hidden;     /* ADD THIS to clip the map inside */
+    border-radius: 20px;
+    overflow: hidden;
 }
 
 .iframe-bg-container-fa01 iframe {
@@ -198,17 +200,17 @@
     width: 100%;
     max-width: 1200px;
     z-index: 1;
-   margin-top: 10rem; 
+    margin-top: 10rem; 
 }
 
 /* Introduction Text Block */
 .connect-intro-fa01 {
     flex: 1;
-    max-width: 28.125rem; /* 450px */
-     text-align: justify; /* This justifies the text */
-    text-justify: inter-word; /* Improves spacing between words */
-    padding: 1.5rem; /* Adds some padding around the text */
-    margin-bottom: 1rem; /* Space between intro and form */
+    max-width: 28.125rem;
+    text-align: justify;
+    text-justify: inter-word;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .connect-intro-fa01 h2 {
@@ -229,16 +231,16 @@
 .connect-intro-fa01 p {
     font-size: 1.1rem;
     color: #4a5568;
-    line-height: 1.7; /* Increased line height for better readability */
-    margin-bottom: 1.5rem; /* Space between paragraphs if you add more */
-    hyphens: auto; /* Enables hyphenation for better justification */
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    hyphens: auto;
 }
 
 /* Form Container Styling */
 .connect-form-container-fa01 {
     flex: 1;
-    max-width: 31.25rem; /* 500px */
-     min-height: 31.25rem; /* 500px */
+    max-width: 31.25rem;
+    min-height: 31.25rem;
     background: rgba(23, 42, 58, 0.85);
     padding: 2.5rem;
     border-radius: 20px;
@@ -246,7 +248,7 @@
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
-     min-height: 60vh;
+    min-height: 60vh;
 }
 
 /* Form Grid Layout */
@@ -319,11 +321,19 @@
 }
 
 /* --- Responsive Design --- */
+@media (min-width: 992px) {
+    /* Show map only on desktop */
+    .iframe-bg-container-fa01 {
+        display: block;
+    }
+}
+
 @media (max-width: 992px) {
     .content-wrapper-fa01 {
         flex-direction: column;
         gap: 3rem;
         text-align: center;
+        margin-top: 2rem; /* Reduced margin for mobile */
     }
     .connect-intro-fa01 {
         max-width: 600px;
