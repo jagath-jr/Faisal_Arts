@@ -98,7 +98,7 @@ a {
     background-repeat: no-repeat;
     opacity: 0;
     animation: crossfade 21s infinite;
-    filter: blur(2px); /* Blur effect on the background images */
+    filter: blur(1.5px); /* Blur effect on the background images */
     transform: scale(1.05); /* Slight zoom to hide blur edges */
 }
 
