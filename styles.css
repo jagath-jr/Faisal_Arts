@@ -98,7 +98,7 @@ a {
     background-repeat: no-repeat;
     opacity: 0;
     animation: crossfade 21s infinite;
-    filter: blur(1.5px); /* Blur effect on the background images */
+    /*filter: blur(1.5px); /* Blur effect on the background images */
     transform: scale(1.05); /* Slight zoom to hide blur edges */
 }
 
@@ -110,7 +110,7 @@ a {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.4); /* Semi-transparent dark overlay */
-    backdrop-filter: blur(1px); /* Additional blur effect */
+    /*backdrop-filter: blur(1px); /* Additional blur effect */
     z-index: 1;
 }
 
@@ -150,7 +150,7 @@ a {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(10, 10, 10, 0.3), rgba(0, 0, 0, 0.3));
+    /*background: linear-gradient(rgba(10, 10, 10, 0.3), rgba(0, 0, 0, 0.3));*/
     z-index: 2; /* Above blur shield */
 }
 
@@ -302,14 +302,7 @@ h1 {
     #preloader.preloader-hidden {
         display: none !important;
     }
-    .slide {
-        filter: blur(1px); /* Less blur on mobile */
-        transform: scale(1.02); /* Smaller zoom on mobile */
-    }
-    
-    .blur-shield {
-        backdrop-filter: blur(1px); /* Less blur on mobile */
-    }
+   
 }
 /* =================================== */
 /* Why Choose Us Section        */
@@ -605,7 +598,7 @@ h1 {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     gap: 20px;
 }
 
@@ -630,6 +623,10 @@ h1 {
 .service-box-02 { background-image: url('home_img/home_Vinyl Print & Cut.webp'); animation: fadeInUp 0.6s 0.3s forwards; }
 .service-box-03 { background-image: url('home_img/home_Engraving & Etching.webp'); animation: fadeInUp 0.6s 0.5s forwards; }
 .service-box-04 { background-image: url('home_img/home_Safety Signboards.webp'); animation: fadeInUp 0.6s 0.7s forwards; }
+.service-box-05 { background-image: url('home_img/home_PVC_Banner.webp'); animation: fadeInUp 0.6s 0.7s forwards; }
+.service-box-06 { background-image: url('home_img/home_Digital LED Screens.webp'); animation: fadeInUp 0.6s 0.7s forwards; }
+
+
 
 .service-overlay {
     position: absolute;
